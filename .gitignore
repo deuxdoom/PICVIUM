@@ -1,0 +1,11 @@
+# github.com/deuxdoom/PICVIUM is a DISTRIBUTION-ONLY repository (devdocs/DECISIONS.md D-011).
+# Everything is ignored by default; only the distribution files below are allow-listed.
+# Source code, tests, scripts, tools, assets, developer docs and build output stay local and are never committed.
+# A second guard (scripts/git-hooks, enabled via core.hooksPath) rejects anything outside this list even with `git add -f`.
+/*
+!/.gitignore
+!/README.md
+!/CHANGELOG.md
+!/License.md
+!/docs/
+!/licenses/
