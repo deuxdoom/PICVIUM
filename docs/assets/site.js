@@ -3,7 +3,6 @@
   const root = document.documentElement;
   const catalogs = window.PicviumLocales;
   if (!catalogs) return;
-  root.classList.add('js-ready');
   const store = {
     get(key) { try { return localStorage.getItem(key); } catch { return null; } },
     set(key, value) { try { localStorage.setItem(key, value); } catch { /* Private/file browsing is supported. */ } }
@@ -25,7 +24,6 @@
   const gallery = document.querySelector('.gallery-viewport');
   const galleryPause = document.querySelector('#gallery-pause');
   const motionToggle = document.querySelector('#motion-toggle');
-  const themeToggle = document.querySelector('#theme-toggle');
   const galleryPosition = document.querySelector('.gallery-position');
   const cards = [...document.querySelectorAll('.gallery-card')];
   const dialog = document.querySelector('#lightbox');
@@ -40,24 +38,6 @@
     { src: 'assets/screens/viewer-actual-size.png', title: 'galleryActualSize', alt: 'altActualSize' }
   ];
   const text = key => catalogs[language][key];
-  let theme = root.dataset.theme === 'dark' ? 'dark' : 'light';
-  function updateThemeButton() {
-    themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
-    themeToggle.dataset.i18nAria = theme === 'dark' ? 'themeToLight' : 'themeToDark';
-    const label = text(themeToggle.dataset.i18nAria);
-    themeToggle.setAttribute('aria-label', label);
-    themeToggle.title = label;
-  }
-  function applyTheme(value, persist = false) {
-    theme = value;
-    root.dataset.theme = theme;
-    document.querySelectorAll('[data-theme-wordmark]').forEach(img => {
-      img.src = `assets/brand/wordmark-${theme}.png`;
-    });
-    document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#0b0f14' : '#f5f7fa';
-    updateThemeButton();
-    if (persist) store.set('picvium.site.theme', theme);
-  }
   // Site motion is independent of the Windows animation preference, per product direction.
   root.classList.toggle('motion-off', store.get('picvium.site.motion') === 'off');
   const isStill = () => root.classList.contains('motion-off');
@@ -99,7 +79,7 @@
     document.querySelector('#language-announcement').textContent = manual ? `${text('languageChanged')} ${nativeName}` : '';
     store.set('picvium.site.language', locale);
     updateMotionButton();
-    updateThemeButton();
+    document.dispatchEvent(new Event('picvium:languagechange'));
     document.querySelector('#copy-status').textContent = '';
     updateGalleryState();
     if (dialog.open) renderShot();
@@ -108,18 +88,10 @@
   }
   function changeLanguage(locale) {
     if (!catalogs[locale] || locale === language) return;
-    const update = () => applyLanguage(locale, true);
-    if (document.startViewTransition && !isStill()) document.startViewTransition(update);
-    else update();
+    applyLanguage(locale, true);
   }
   select.addEventListener('change', () => changeLanguage(select.value));
   document.querySelectorAll('[data-language]').forEach(button => button.addEventListener('click', () => changeLanguage(button.dataset.language)));
-  themeToggle.hidden = false;
-  themeToggle.addEventListener('click', () => {
-    const update = () => applyTheme(theme === 'dark' ? 'light' : 'dark', true);
-    if (document.startViewTransition && !isStill()) document.startViewTransition(update);
-    else update();
-  });
   motionToggle.hidden = false;
   motionToggle.addEventListener('click', () => {
     root.classList.toggle('motion-off');
@@ -140,12 +112,14 @@
     menuToggle.setAttribute('aria-expanded', String(open));
     menuToggle.setAttribute('aria-label', text(open ? 'closeMenu' : 'openMenu'));
   });
+  // Collapse navigation only after the mobile controls have working handlers.
+  root.classList.add('js-ready');
   mobileNav.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !mobileNav.hidden) { closeMenu(); menuToggle.focus(); }
   });
   document.addEventListener('click', event => { if (!event.target.closest('.site-header')) closeMenu(); });
-  window.addEventListener('resize', () => { if (innerWidth > 900) closeMenu(); });
+  window.addEventListener('resize', () => { if (innerWidth > 1190) closeMenu(); });
 
   let galleryVisible = false;
   let galleryHover = false;
@@ -222,10 +196,12 @@
     cards.forEach((card, i) => { const candidate = Math.abs(card.offsetLeft + card.offsetWidth / 2 - center); if (candidate < distance) { index = i; distance = candidate; } });
     return index;
   };
-  gallery.addEventListener('scroll', () => {
+  function updateGalleryPosition() {
     const position = `${getCardIndex() + 1} / ${cards.length}`;
     if (galleryPosition.textContent !== position) galleryPosition.textContent = position;
-  }, { passive: true });
+  }
+  gallery.addEventListener('scroll', updateGalleryPosition, { passive: true });
+  window.addEventListener('resize', updateGalleryPosition);
   function moveGallery(direction) {
     galleryPaused = true;
     updateGalleryState();
@@ -272,7 +248,8 @@
     });
   });
   stage.addEventListener('pointerleave', resetStage);
-  finePointer.addEventListener('change', resetStage);
+  if (finePointer.addEventListener) finePointer.addEventListener('change', resetStage);
+  else if (finePointer.addListener) finePointer.addListener(resetStage);
 
   const copyButton = document.querySelector('#copy-sha');
   if (window.isSecureContext && navigator.clipboard?.writeText) {
@@ -324,9 +301,8 @@
   }
   window.addEventListener('scroll', () => { if (!scrollFrame) scrollFrame = requestAnimationFrame(updateScroll); }, { passive: true });
   window.addEventListener('resize', updateScroll);
-  applyTheme(theme);
   applyLanguage(language);
-  galleryPosition.textContent = `1 / ${cards.length}`;
+  updateGalleryPosition();
   if ('IntersectionObserver' in window && !isStill()) {
     root.classList.add('has-reveals');
     const reveals = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.remove('reveal-wait'); reveals.unobserve(entry.target); } }), { threshold: .08, rootMargin: '0px 0px 30px' });
