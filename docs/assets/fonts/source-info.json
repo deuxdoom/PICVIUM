@@ -1,0 +1,92 @@
+[
+  {
+    "file": "latin-400.woff2",
+    "original": "PretendardStd-Regular.otf",
+    "sourceVersion": "Version 1.309;Glyphs 3.2 (3225)",
+    "sourceSHA256": "9a12d6d5dfd352f28b511706a90ee7cc4d43dd7445514a4bd0dae152d0b73d2d",
+    "bytes": 21648,
+    "license": "OFL-PretendardStd.txt",
+    "characters": 157
+  },
+  {
+    "file": "latin-600.woff2",
+    "original": "PretendardStd-SemiBold.otf",
+    "sourceVersion": "Version 1.309;Glyphs 3.2 (3225)",
+    "sourceSHA256": "7fd0e7de9d2f91d0ba8d8a1d75d051570044f0b703bcecddd3cd31f53e1890a1",
+    "bytes": 21892,
+    "license": "OFL-PretendardStd.txt",
+    "characters": 157
+  },
+  {
+    "file": "ko-400.woff2",
+    "original": "Pretendard-Regular.otf",
+    "sourceVersion": "Version 1.309;Glyphs 3.2 (3225)",
+    "sourceSHA256": "3ffbacde6ab8411f1d2db54bb9b1f0b3ee2a738932033722cf0388c06aed1c93",
+    "bytes": 46180,
+    "license": "OFL-Pretendard.txt",
+    "characters": 484
+  },
+  {
+    "file": "ko-600.woff2",
+    "original": "Pretendard-SemiBold.otf",
+    "sourceVersion": "Version 1.309;Glyphs 3.2 (3225)",
+    "sourceSHA256": "c89bc43027dc7cde5726e96223376f8eec09302b2fc1f8147fd5b57cfc376118",
+    "bytes": 46304,
+    "license": "OFL-Pretendard.txt",
+    "characters": 484
+  },
+  {
+    "file": "ja-400.woff2",
+    "original": "PretendardJP-Regular.otf",
+    "sourceVersion": "Version 1.309;Glyphs 3.2 (3225)",
+    "sourceSHA256": "8e45c1999c941e8237e52c650c64667638cff1e50b9492c7b02ee1d380b7d06d",
+    "bytes": 120088,
+    "license": "OFL-PretendardJP.txt",
+    "characters": 867
+  },
+  {
+    "file": "ja-600.woff2",
+    "original": "PretendardJP-SemiBold.otf",
+    "sourceVersion": "Version 1.309;Glyphs 3.2 (3225)",
+    "sourceSHA256": "7cd2b757bd8b8db79b4b87c3b402aa62aca666b55ff50ae0799e14ece1942314",
+    "bytes": 123320,
+    "license": "OFL-PretendardJP.txt",
+    "characters": 867
+  },
+  {
+    "file": "sc-400.woff2",
+    "original": "NotoSansSC-Regular.otf",
+    "sourceVersion": "Version 2.004;hotconv 1.0.118;makeotfexe 2.5.65603",
+    "sourceSHA256": "faa6c9df652116dde789d351359f3d7e5d2285a2b2a1f04a2d7244df706d5ea9",
+    "bytes": 169844,
+    "license": "OFL-NotoSansCJK.txt",
+    "characters": 733
+  },
+  {
+    "file": "sc-600.woff2",
+    "original": "NotoSansSC-Bold.otf",
+    "sourceVersion": "Version 2.004;hotconv 1.0.118;makeotfexe 2.5.65603",
+    "sourceSHA256": "c6cb5a93abaa9edc8ee7463b7ebb7f42d618d40e6ed2f7a5371c97b0b64767c0",
+    "bytes": 172564,
+    "license": "OFL-NotoSansCJK.txt",
+    "characters": 733
+  },
+  {
+    "file": "tc-400.woff2",
+    "original": "NotoSansTC-Regular.otf",
+    "sourceVersion": "Version 2.004;hotconv 1.0.118;makeotfexe 2.5.65603",
+    "sourceSHA256": "5bab0cb3c1cf89dde07c4a95a4054b195afbcfe784d69d75c340780712237537",
+    "bytes": 155540,
+    "license": "OFL-NotoSansCJK.txt",
+    "characters": 655
+  },
+  {
+    "file": "tc-600.woff2",
+    "original": "NotoSansTC-Bold.otf",
+    "sourceVersion": "Version 2.004;hotconv 1.0.118;makeotfexe 2.5.65603",
+    "sourceSHA256": "55420b259eb119bf5f2a0aadba10cf9d736c12d64ab93e78546d69ef5f43558b",
+    "bytes": 158124,
+    "license": "OFL-NotoSansCJK.txt",
+    "characters": 655
+  }
+]

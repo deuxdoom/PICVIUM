@@ -1,0 +1,47 @@
+PICVIUM website assets
+
+Picvium logo, icon and wordmark
+Copyright (c) 2026 deuxdoom. All rights reserved.
+Copied without modification from the project's approved branding exports.
+
+Application captures
+Current Release Picvium UI assemblies rendered with the native Windows desktop backend
+in an isolated capture harness (2026-10-14), using the original distribution's native libraries.
+Lossless PNG at actual monitor scaling; client visual only. No Computer Use, interface
+reconstruction or image editing. Assembly/native/image hashes and method: screens/source-info.json
+Main photograph: SAMPLE_01.jpg, selected by the copyright holder; AI source: SAMPLE_09.png.
+The batch output field uses the common public Pictures/Converted directory as an example;
+no file conversion, inference or image save was run for these dialog captures.
+
+Additional photography
+Eric Park (@deuxdoom), used at the photographer's explicit request.
+Yellow rose on the table
+https://unsplash.com/photos/yellow-rose-on-the-table-OkAjyG8sumY
+Portrait on wall seen through the white curtains
+https://unsplash.com/photos/portrait-on-wall-seen-through-the-white-curtains-v1s0HP8Zg3I
+Profile: https://unsplash.com/@deuxdoom
+Unsplash License: https://unsplash.com/license
+The page distinguishes photographs from application captures.
+
+GitHub icon
+Unmodified mark-github-16.svg from GitHub Octicons:
+https://github.com/primer/octicons/blob/main/icons/mark-github-16.svg
+MIT License. Full text: licenses/octicons.txt
+
+Website fonts
+Local WOFF2 subsets of Pretendard / Pretendard Std / Pretendard JP and
+Noto Sans CJK, licensed under the SIL Open Font License 1.1.
+Modified font family names: Picvium Web Sans / KO / JP / SC / TC.
+The reserved font name Pretendard is not used in the modified fonts.
+Copyright notices and full license texts:
+licenses/OFL-Pretendard.txt
+licenses/OFL-PretendardStd.txt
+licenses/OFL-PretendardJP.txt
+licenses/OFL-NotoSansCJK.txt
+Source versions and hashes: fonts/source-info.json
+Original projects:
+https://github.com/orioncactus/pretendard
+https://github.com/notofonts/noto-cjk
+
+The static page uses local assets and has no runtime package or CDN dependency.
+Full Picvium usage license: licenses/picvium.txt

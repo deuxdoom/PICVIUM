@@ -1,0 +1,16 @@
+/* OFL subsets of the app fonts. Modified font names do not use the reserved names. */
+@font-face{font-family:"Picvium Web Sans";src:url("fonts/latin-400.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Picvium Web Sans";src:url("fonts/latin-600.woff2") format("woff2");font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:"Picvium Web KO";src:url("fonts/ko-400.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Picvium Web KO";src:url("fonts/ko-600.woff2") format("woff2");font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:"Picvium Web JP";src:url("fonts/ja-400.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Picvium Web JP";src:url("fonts/ja-600.woff2") format("woff2");font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:"Picvium Web SC";src:url("fonts/sc-400.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Picvium Web SC";src:url("fonts/sc-600.woff2") format("woff2");font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:"Picvium Web TC";src:url("fonts/tc-400.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Picvium Web TC";src:url("fonts/tc-600.woff2") format("woff2");font-style:normal;font-weight:600;font-display:swap}
+
+:root{font-family:"Picvium Web Sans","Picvium Web KO","Picvium Web JP","Picvium Web SC","Picvium Web TC",sans-serif}
+html:lang(ja),[lang="ja"]{font-family:"Picvium Web Sans","Picvium Web JP","Picvium Web KO","Picvium Web SC",sans-serif}
+html:lang(zh-Hans),[lang="zh-Hans"]{font-family:"Picvium Web Sans","Picvium Web SC","Picvium Web KO","Picvium Web JP",sans-serif}
+html:lang(zh-Hant),[lang="zh-Hant"]{font-family:"Picvium Web Sans","Picvium Web TC","Picvium Web KO","Picvium Web JP",sans-serif}

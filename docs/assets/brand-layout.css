@@ -1,0 +1,65 @@
+/* Brand guide: approved logo geometry, quiet graphite/silver, restrained cyan. */
+:root { --navy: #171f2f; --paper: #f6f8fb; }
+.hero { padding-top: 150px; }
+.hero-wordmark { width: 200px; margin: 0 auto 28px; }
+.hero-copy { text-align: center; max-width: 960px; }
+.hero h1 { font-size: clamp(40px, 5.4vw, 72px); line-height: 1.2; letter-spacing: -.055em; }
+.hero h1 .gradient-text { color: #e6eaf0; background: none; -webkit-text-fill-color: currentColor; }
+.hero-description { max-width: 720px; margin: 28px auto 0; font-size: 18px; }
+.hero-glow, .stage-orbit { display: none; }
+.hero-stage { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-top: 56px; }
+.hero-frame { grid-column: 1 / -1; margin: 0; transform: none; border-radius: 12px; box-shadow: 0 24px 80px #0004; }
+.hero-screen { transform: none; filter: none; }
+.floating-card { position: static; width: auto; transform: none; animation: none; padding: 20px 24px; border-radius: 10px; box-shadow: none; background: #171f2f; border: 1px solid #e6eaf01c; }
+.float-detail strong { font-size: 32px; }
+.float-info strong { font-size: 28px; }
+.stage-note { grid-column: 1 / -1; text-align: center; margin: 0; font-size: 12px; }
+.hero-bottom { margin-top: 40px; }
+.brand-story { padding: 72px 0; border-bottom: 1px solid #17233618; }
+.story-layout { display: grid; grid-template-columns: 1fr 1.25fr; gap: 72px; align-items: start; }
+.story-layout .eyebrow { color: #007fa8; font-weight: 700; letter-spacing: .08em; margin-bottom: 16px; }
+.story-layout h2 { font-size: clamp(28px, 3vw, 42px); }
+.story-layout p { color: #526078; font-size: 17px; line-height: 1.8; }
+.story-layout .story-thought { color: #192437; font-weight: 600; margin-top: 16px; }
+.photo-main, .photo-secondary, .dialog-card { transform: none; }
+.photo-main, .photo-secondary { box-shadow: 0 16px 36px #263b5714; }
+.edit-layout { grid-template-columns: 1.15fr 1fr; gap: 64px; }
+.edit-features { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 24px; }
+.edit-features article { margin: 0; min-width: 0; align-items: flex-start; }
+.edit-features h3 { line-height: 1.35; }
+.edit-features p { font-size: 14px; color: #acb9cd; }
+.edit-float { position: static; margin-top: 18px; transform: none; animation: none; padding: 18px 20px; }
+.edit-grid { opacity: .35; }
+.gallery-image { height: 310px; }
+.gallery-card h3 { font-size: 17px; }
+.gallery-card p { font-size: 12px; }
+.gallery-image img { filter: none; }
+.project-description, .project-layout>div>p { max-width: 720px; }
+.site-footer .legal-note { max-width: 1000px; line-height: 1.8; }
+@media (max-width: 1000px) {
+  .edit-layout { grid-template-columns: 1fr; gap: 36px; }
+  .edit-visual { max-width: 650px; margin-inline: auto; width: 100%; }
+  .story-layout { gap: 40px; }
+}
+@media (max-width: 720px) {
+  .hero { padding-top: 110px; }
+  .hero-wordmark { width: 150px; margin-bottom: 24px; }
+  .hero h1 { font-size: clamp(33px, 8.6vw, 48px); line-height: 1.24; }
+  .hero-description { font-size: 15px; margin-top: 22px; }
+  .hero-stage { padding-top: 32px; gap: 12px; }
+  .floating-card { padding: 16px; min-width: 0; }
+  .float-info strong { font-size: 22px; gap: 8px; }
+  .float-detail strong { font-size: 28px; }
+  .card-meta { white-space: normal; }
+  .hero-bottom { margin-top: 28px; }
+  .brand-story { padding: 48px 0; }
+  .story-layout { grid-template-columns: 1fr; gap: 24px; }
+  .story-layout p { font-size: 15px; }
+  .edit-features { grid-template-columns: 1fr; gap: 24px; }
+  .gallery-image { height: 250px; }
+}
+@media (max-width: 374px) {
+  .hero-stage { grid-template-columns: 1fr; }
+  .floating-card { display: grid; }
+  .float-detail strong, .float-info strong { font-size: 26px; }
+}

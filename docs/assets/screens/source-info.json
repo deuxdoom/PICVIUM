@@ -1,0 +1,48 @@
+{
+  "capturedUtc": "2026-10-14T04:54:50.663897+00:00",
+  "method": "Existing Release production UI assemblies in a temporary native desktop capture harness; not a capture of the single-file executable",
+  "productionUiSha256": "918cb728011d6d6d20e31734d726d24c9f2bc92251b9053d97374da72bc08f61",
+  "productionImagingSha256": "c2bf2c5e549d41a0cf1ea0f118b2f47af619cb0253e7b5c552aa62d630865aed",
+  "nativeSha256": "b38daca46aa374944116d8da9f6a16a5c09c2fcaabd9eed8f8e080b8f01e0a36",
+  "captures": [
+    {
+      "file": "viewer-photo.png",
+      "width": 1770,
+      "height": 1185,
+      "sha256": "efc88db2a5f0ec37e8b104142e2dcf57dff5c1fc4c59550109f03d56e2aabe87",
+      "method": "native Windows Avalonia RenderTargetBitmap at actual monitor scaling; lossless client visual; no Computer Use or image edits"
+    },
+    {
+      "file": "toolbar.png",
+      "width": 1080,
+      "height": 840,
+      "sha256": "ebf440500fbe920df131abcb8e08b8dc9f4a6b51398ea6f9387d65e6ff4b0f8a",
+      "method": "native Windows Avalonia RenderTargetBitmap at actual monitor scaling; lossless client visual; no Computer Use or image edits"
+    },
+    {
+      "file": "settings.png",
+      "width": 780,
+      "height": 840,
+      "sha256": "3e0b49339d1b9c71bf0461de170d2e18e3c128ef37285e07d64391d7a7125eec",
+      "method": "native Windows Avalonia RenderTargetBitmap at actual monitor scaling; lossless client visual; no Computer Use or image edits"
+    },
+    {
+      "file": "batch.png",
+      "width": 900,
+      "height": 720,
+      "sha256": "427c93b58e86ef7674de43889a98383c5b3ffe6bdcdfd2c0c841035c655a2b0e",
+      "method": "native Windows Avalonia RenderTargetBitmap at actual monitor scaling; lossless client visual; no Computer Use or image edits"
+    },
+    {
+      "file": "upscale.png",
+      "width": 900,
+      "height": 554,
+      "sha256": "cecc01fdd130378378659faf25bb6e18f5b66aedfd0eddef546f03d66eb4a344",
+      "method": "native Windows Avalonia RenderTargetBitmap at actual monitor scaling; lossless client visual; no Computer Use or image edits"
+    }
+  ],
+  "photo": "SAMPLE/SAMPLE_01.jpg (copyright-holder provided reference); AI source SAMPLE/SAMPLE_09.png",
+  "sourceImagesModified": false,
+  "dialogs": "settings and toolbar displayed; batch target field set to common public Pictures/Converted for the screenshot, no conversion; AI ready with actual Vulkan GPU probe, no inference or save",
+  "fullImageEdits": false
+}
