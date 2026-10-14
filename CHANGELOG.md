@@ -3,9 +3,9 @@
 All notable changes to PICVIUM releases are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow [Semantic Versioning](https://semver.org/).
 
-## [1.0.0] - Unreleased
+## [1.0.0] - 2026-10-14
 
-1.0.0 정식 배포를 준비 중입니다. 아래는 현재 Windows x64 개발 빌드의 변경 내용이며,
+첫 정식 배포입니다. 아래는 Windows x64 빌드의 변경 내용이며,
 기존 `test` 공개 테스트 빌드와 기능·검증 범위가 같다는 뜻은 아닙니다.
 
 ### Added

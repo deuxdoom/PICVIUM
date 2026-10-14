@@ -34,7 +34,7 @@ PICVIUM은 사진·그래픽·카메라 RAW·벡터·문서 이미지를 한 창
 이 저장소는 배포 안내용이며 앱 소스는 공개하지 않습니다. 실행 파일은 [GitHub 릴리스](https://github.com/deuxdoom/PICVIUM/releases)로 배포합니다.
 
 > [!NOTE]
-> **1.0.0 정식 배포를 준비하고 있습니다.** [기존 공개 테스트 빌드](https://github.com/deuxdoom/PICVIUM/releases/tag/test)와 정식 배포는 구분합니다. 아래 기능은 현재 Windows x64 개발 빌드에서 검증한 범위이며, 기존 테스트 빌드에 모두 포함됐다는 뜻은 아닙니다.
+> **1.0.0 정식 버전을 배포했습니다(2026-10-14).** [기존 공개 테스트 빌드](https://github.com/deuxdoom/PICVIUM/releases/tag/test)와 정식 배포는 구분합니다. 아래 기능은 Windows x64 빌드에서 검증한 범위이며, 기존 테스트 빌드에 모두 포함됐다는 뜻은 아닙니다.
 > 정식 배포에는 실행 파일의 SHA-256과 제3자 고지를 함께 제공합니다.
 
 PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했습니다. 쌓인 사진을 돌아보고, 필요한 만큼 다듬으며 남기고 싶은 순간에 집중하도록 돕습니다.
