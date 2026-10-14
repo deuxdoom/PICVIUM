@@ -9,10 +9,9 @@
 <p align="center">Clear the clutter. Keep the moments.<br>이미지 뷰어 &amp; 에디터 · PICVIUM / 픽비움</p>
 
 <p align="center">
-  <a href="https://github.com/deuxdoom/PICVIUM/releases"><img src="https://img.shields.io/github/v/release/deuxdoom/PICVIUM?include_prereleases&amp;style=flat-square&amp;label=TEST%20BUILD&amp;logo=github&amp;logoColor=white&amp;labelColor=0B0F14&amp;color=00C8FF" alt="최신 공개 테스트 빌드"></a>
+  <a href="https://github.com/deuxdoom/PICVIUM/releases/latest"><img src="https://img.shields.io/github/v/release/deuxdoom/PICVIUM?style=flat-square&amp;label=RELEASE&amp;logo=github&amp;logoColor=white&amp;labelColor=0B0F14&amp;color=00C8FF" alt="최신 릴리스"></a>
   <a href="https://github.com/deuxdoom/PICVIUM/releases"><img src="https://img.shields.io/github/downloads/deuxdoom/PICVIUM/total?style=flat-square&amp;label=DOWNLOADS&amp;logo=github&amp;logoColor=white&amp;labelColor=0B0F14&amp;color=7B61FF" alt="전체 다운로드 수"></a>
   <img src="https://img.shields.io/badge/WINDOWS-10%20%2F%2011%20x64-00C8FF?style=flat-square&amp;logo=windows&amp;logoColor=white&amp;labelColor=0B0F14" alt="Windows 10/11 64비트">
-  <img src="https://img.shields.io/badge/STATUS-IN%20DEVELOPMENT-7B61FF?style=flat-square&amp;labelColor=0B0F14" alt="개발 중">
   <a href="License.md"><img src="https://img.shields.io/badge/LICENSE-FREEWARE-E5484D?style=flat-square&amp;labelColor=0B0F14" alt="라이선스: 개인·비상업용 프리웨어"></a>
 </p>
 
@@ -32,10 +31,6 @@ PICVIUM은 사진·그래픽·카메라 RAW·벡터·문서 이미지를 한 창
 9개 언어 즉시 전환과 사용자 지정 도구 모음·아이콘 테마를 더했습니다.
 
 이 저장소는 배포 안내용이며 앱 소스는 공개하지 않습니다. 실행 파일은 [GitHub 릴리스](https://github.com/deuxdoom/PICVIUM/releases)로 배포합니다.
-
-> [!NOTE]
-> **1.0.0 정식 버전을 배포했습니다(2026-10-14).** [기존 공개 테스트 빌드](https://github.com/deuxdoom/PICVIUM/releases/tag/test)와 정식 배포는 구분합니다. 아래 기능은 Windows x64 빌드에서 검증한 범위이며, 기존 테스트 빌드에 모두 포함됐다는 뜻은 아닙니다.
-> 정식 배포에는 실행 파일의 SHA-256과 제3자 고지를 함께 제공합니다.
 
 PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했습니다. 쌓인 사진을 돌아보고, 필요한 만큼 다듬으며 남기고 싶은 순간에 집중하도록 돕습니다.
 
@@ -90,7 +85,7 @@ PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했�
 
 ## 🖼 지원 형식
 
-보기 형식은 실제 샘플 파일로 검증한 형식만 목록에 넣습니다. 보기가 가능하다고 해서 그 형식으로 저장할 수 있다는 뜻은 아닙니다.
+보기가 가능하다고 해서 그 형식으로 저장할 수 있다는 뜻은 아닙니다.
 
 | 분류 | 형식 |
 |---|---|
@@ -103,11 +98,11 @@ PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했�
 - DNG는 무손실·손실 JPEG, 비압축, 부동소수점 HDR, DNG 1.7 JPEG XL 압축, 스마트폰·드론·필름 스캐너 DNG를 확인했습니다.
 - 형식은 확장자가 아니라 파일 내용으로 판별합니다. 확장자만 바뀐 파일도 실제 형식으로 엽니다.
 - EPS는 TIFF/WMF 내장 미리보기만 표시하며 PostScript를 실행하지 않습니다. SVG textPath 등 확인된 미지원 변형은 안내합니다.
-- GIF로 저장할 때는 현재의 정적 이미지·선택 페이지만 인코딩합니다. 애니메이션을 유지한 저장은 지원한다고 주장하지 않습니다.
+- GIF로 저장하면 현재 이미지(또는 선택한 페이지) 한 장만 저장하며 애니메이션은 유지되지 않습니다.
 
 ## 💻 시스템 요구 사항
 
-- Windows 10/11 64비트. macOS·Linux는 해당 플랫폼의 릴리스 빌드를 검증한 뒤에 지원 목록에 올립니다.
+- Windows 10/11 64비트. macOS·Linux 버전은 준비 중입니다.
 - .NET 10 런타임이 `lib/dotnet/`에 포함되어 있어 따로 설치할 필요가 없습니다.
 - PDF, EPS, X3F, GPR 보기와 AI 업스케일은 Windows x64용 구성 요소를 사용합니다. AI 업스케일에는 Vulkan GPU가 추가로 필요합니다.
 - 이미지 처리는 모두 내 PC에서 이루어지며, 이미지를 외부로 보내지 않습니다.

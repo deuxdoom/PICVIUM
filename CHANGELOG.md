@@ -5,8 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [1.0.0] - 2026-10-14
 
-첫 정식 배포입니다. 아래는 Windows x64 빌드의 변경 내용이며,
-기존 `test` 공개 테스트 빌드와 기능·검증 범위가 같다는 뜻은 아닙니다.
+첫 정식 배포입니다(Windows x64).
 
 ### Added
 
@@ -18,4 +17,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - 일괄 변환: 여러 파일·7개 저장 형식·품질·진행·취소·파일별 결과. 첫 이미지/페이지 처리, 메타데이터 제거·ICC 유지, 기존 파일 건너뛰기.
 - 도구 모음 명령·순서·구분선 사용자 지정, 아이콘 테마, 명령 검색·단축키 안내.
 - 9개 언어 즉시 전환, 포터블·원자적 버전 설정, 단일 실행과 Windows 파일 연결·바탕화면·파일 위치·휴지통 연동.
+- 배포 ZIP에 .NET 10 런타임 포함(별도 설치 불필요), Picvium 정보 창에서 제3자 라이선스 문서 연결.
 
