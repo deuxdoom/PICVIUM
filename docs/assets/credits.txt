@@ -13,12 +13,34 @@ Main photograph: SAMPLE_01.jpg, selected by the copyright holder; AI source: SAM
 The batch output field uses the common public Pictures/Converted directory as an example;
 no file conversion, inference or image save was run for these dialog captures.
 
+Functional viewer captures (viewer-thumbnails.png, viewer-crop.png, viewer-actual-size.png)
+Current Release production assemblies rendered with the same native Windows backend in
+an isolated capture harness. Nine actual Eric Park / @deuxdoom photos form the folder
+filmstrip; the white-curtains exhibition photo is selected, with the EXIF panel and
+information bar visible. Downloaded photos have no EXIF camera values, and the UI shows
+them as unavailable. The crop screen uses the coffee photo with a real 1607 x 1236 px
+selection routed through production Avalonia input handlers. The yellow rose screen uses
+the production 1:1 actual-size action at 100%. Apply/Save were never executed.
+Original SAMPLE and photo bytes are unchanged. Captures were exported directly as lossless
+PNG, with no image editing or reconstructed interface text. Per-capture assembly/native
+hashes, individual Unsplash source URLs/hashes and method: screens/source-info.json,
+featureCapture. Numbered website markers are HTML overlays; enlarged PNGs are unmodified.
+
 Additional photography
 Eric Park (@deuxdoom), used at the photographer's explicit request.
 Yellow rose on the table
 https://unsplash.com/photos/yellow-rose-on-the-table-OkAjyG8sumY
 Portrait on wall seen through the white curtains
 https://unsplash.com/photos/portrait-on-wall-seen-through-the-white-curtains-v1s0HP8Zg3I
+
+Additional @deuxdoom photos used inside the functional captures:
+https://unsplash.com/photos/6_qlt9XCo9g
+https://unsplash.com/photos/lLk30leHhVY
+https://unsplash.com/photos/UAV0_3SQeb8
+https://unsplash.com/photos/iJ248tEuJ3Y
+https://unsplash.com/photos/RGkgZOZLInw
+https://unsplash.com/photos/o0he0B06RiI
+https://unsplash.com/photos/TkYWmBvb9KM
 Profile: https://unsplash.com/@deuxdoom
 Unsplash License: https://unsplash.com/license
 The page distinguishes photographs from application captures.

@@ -24,21 +24,49 @@
   const mobileNav = document.querySelector('#mobile-nav');
   const gallery = document.querySelector('.gallery-viewport');
   const galleryPause = document.querySelector('#gallery-pause');
+  const motionToggle = document.querySelector('#motion-toggle');
+  const themeToggle = document.querySelector('#theme-toggle');
   const galleryPosition = document.querySelector('.gallery-position');
   const cards = [...document.querySelectorAll('.gallery-card')];
   const dialog = document.querySelector('#lightbox');
   const shots = [
     { src: 'assets/screens/viewer-photo.png', title: 'galleryPhoto', alt: 'altPhoto' },
-    { src: 'assets/photos/yellow-rose.jpg', title: 'galleryArt', alt: 'altRose' },
+    { src: 'assets/screens/viewer-thumbnails.png', title: 'galleryFolder', alt: 'altThumbnails' },
     { src: 'assets/screens/toolbar.png', title: 'galleryToolbar', alt: 'altToolbar' },
     { src: 'assets/screens/settings.png', title: 'gallerySettings', alt: 'altSettings' },
-    { src: 'assets/photos/white-curtains.jpg', title: 'galleryCurtains', alt: 'altCurtains' },
+    { src: 'assets/screens/viewer-crop.png', title: 'galleryCrop', alt: 'altCrop' },
     { src: 'assets/screens/upscale.png', title: 'galleryAi', alt: 'altAi' },
-    { src: 'assets/screens/batch.png', title: 'galleryBatch', alt: 'altBatch' }
+    { src: 'assets/screens/batch.png', title: 'galleryBatch', alt: 'altBatch' },
+    { src: 'assets/screens/viewer-actual-size.png', title: 'galleryActualSize', alt: 'altActualSize' }
   ];
   const text = key => catalogs[language][key];
+  let theme = root.dataset.theme === 'dark' ? 'dark' : 'light';
+  function updateThemeButton() {
+    themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
+    themeToggle.dataset.i18nAria = theme === 'dark' ? 'themeToLight' : 'themeToDark';
+    const label = text(themeToggle.dataset.i18nAria);
+    themeToggle.setAttribute('aria-label', label);
+    themeToggle.title = label;
+  }
+  function applyTheme(value, persist = false) {
+    theme = value;
+    root.dataset.theme = theme;
+    document.querySelectorAll('[data-theme-wordmark]').forEach(img => {
+      img.src = `assets/brand/wordmark-${theme}.png`;
+    });
+    document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#0b0f14' : '#f5f7fa';
+    updateThemeButton();
+    if (persist) store.set('picvium.site.theme', theme);
+  }
   // Site motion is independent of the Windows animation preference, per product direction.
-  const isStill = () => false;
+  root.classList.toggle('motion-off', store.get('picvium.site.motion') === 'off');
+  const isStill = () => root.classList.contains('motion-off');
+  function updateMotionButton() {
+    motionToggle.setAttribute('aria-pressed', String(isStill()));
+    motionToggle.dataset.i18nAria = isStill() ? 'resumeMotion' : 'pauseMotion';
+    motionToggle.setAttribute('aria-label', text(motionToggle.dataset.i18nAria));
+    motionToggle.querySelector('[data-motion-label]').textContent = text(motionToggle.dataset.i18nAria);
+  }
   function updateGalleryState() {
     galleryPause.setAttribute('aria-pressed', String(galleryPaused));
     galleryPause.firstElementChild.textContent = text(galleryPaused ? 'resumeGallery' : 'pauseGallery');
@@ -70,6 +98,9 @@
     const nativeName = select.selectedOptions[0].textContent;
     document.querySelector('#language-announcement').textContent = manual ? `${text('languageChanged')} ${nativeName}` : '';
     store.set('picvium.site.language', locale);
+    updateMotionButton();
+    updateThemeButton();
+    document.querySelector('#copy-status').textContent = '';
     updateGalleryState();
     if (dialog.open) renderShot();
     menuToggle.setAttribute('aria-label', text(mobileNav.hidden ? 'openMenu' : 'closeMenu'));
@@ -83,6 +114,20 @@
   }
   select.addEventListener('change', () => changeLanguage(select.value));
   document.querySelectorAll('[data-language]').forEach(button => button.addEventListener('click', () => changeLanguage(button.dataset.language)));
+  themeToggle.hidden = false;
+  themeToggle.addEventListener('click', () => {
+    const update = () => applyTheme(theme === 'dark' ? 'light' : 'dark', true);
+    if (document.startViewTransition && !isStill()) document.startViewTransition(update);
+    else update();
+  });
+  motionToggle.hidden = false;
+  motionToggle.addEventListener('click', () => {
+    root.classList.toggle('motion-off');
+    store.set('picvium.site.motion', isStill() ? 'off' : 'on');
+    updateMotionButton();
+    resetStage();
+    scheduleGallery();
+  });
   menuToggle.hidden = false;
   function closeMenu() {
     mobileNav.hidden = true;
@@ -196,7 +241,52 @@
     if (event.target !== gallery) return;
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); moveGallery(event.key === 'ArrowRight' ? 1 : -1); }
   });
-  document.addEventListener('visibilitychange', scheduleGallery);
+  document.addEventListener('visibilitychange', () => {
+    root.classList.toggle('page-hidden', document.hidden);
+    if (document.hidden) resetStage();
+    scheduleGallery();
+  });
+
+  // A small, bounded perspective response leaves the original capture unchanged.
+  const stage = document.querySelector('.hero-stage');
+  const finePointer = matchMedia('(hover: hover) and (pointer: fine) and (min-width: 901px)');
+  let stageFrame = 0;
+  let stagePoint = { x: 0, y: 0 };
+  function resetStage() {
+    if (stageFrame) cancelAnimationFrame(stageFrame);
+    stageFrame = 0;
+    stage.style.setProperty('--pointer-x', '0');
+    stage.style.setProperty('--pointer-y', '0');
+  }
+  stage.addEventListener('pointermove', event => {
+    if (!finePointer.matches || isStill() || document.hidden || event.pointerType !== 'mouse') return;
+    const bounds = stage.getBoundingClientRect();
+    stagePoint = {
+      x: Math.max(-1, Math.min(1, (event.clientX - bounds.left) / bounds.width * 2 - 1)),
+      y: Math.max(-1, Math.min(1, (event.clientY - bounds.top) / bounds.height * 2 - 1))
+    };
+    if (!stageFrame) stageFrame = requestAnimationFrame(() => {
+      stageFrame = 0;
+      stage.style.setProperty('--pointer-x', stagePoint.x.toFixed(3));
+      stage.style.setProperty('--pointer-y', stagePoint.y.toFixed(3));
+    });
+  });
+  stage.addEventListener('pointerleave', resetStage);
+  finePointer.addEventListener('change', resetStage);
+
+  const copyButton = document.querySelector('#copy-sha');
+  if (window.isSecureContext && navigator.clipboard?.writeText) {
+    copyButton.hidden = false;
+    copyButton.addEventListener('click', async () => {
+      copyButton.disabled = true;
+      try {
+        await navigator.clipboard.writeText(document.querySelector('#download-sha').textContent.trim());
+        document.querySelector('#copy-status').textContent = text('hashCopied');
+      } catch {
+        document.querySelector('#copy-status').textContent = text('hashCopyFailed');
+      } finally { copyButton.disabled = false; }
+    });
+  }
 
   if (typeof dialog.showModal === 'function') {
     document.querySelectorAll('[data-shot]').forEach(link => link.addEventListener('click', event => {
@@ -221,19 +311,20 @@
     document.querySelector('#lightbox-next').addEventListener('click', () => moveShot(1));
     dialog.addEventListener('keydown', event => { if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); moveShot(event.key === 'ArrowRight' ? 1 : -1); } });
   }
-  const sections = [...document.querySelectorAll('#view, #edit, #screens, #languages')];
+  const sections = [...document.querySelectorAll('#view, #edit, #screens, #languages, #project')];
   let scrollFrame = 0;
   function updateScroll() {
     scrollFrame = 0;
+    root.classList.toggle('is-scrolled', scrollY > 20);
     const end = document.documentElement.scrollHeight - innerHeight;
     root.style.setProperty('--progress', end > 0 ? String(Math.max(0, Math.min(1, scrollY / end))) : '0');
     let active = null;
     for (const section of sections) { if (section.getBoundingClientRect().top <= 160) active = section.id; }
-    if (document.querySelector('#project').getBoundingClientRect().top < 160) active = null;
     document.querySelectorAll('[data-section]').forEach(link => { if (link.dataset.section === active) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current'); });
   }
   window.addEventListener('scroll', () => { if (!scrollFrame) scrollFrame = requestAnimationFrame(updateScroll); }, { passive: true });
   window.addEventListener('resize', updateScroll);
+  applyTheme(theme);
   applyLanguage(language);
   galleryPosition.textContent = `1 / ${cards.length}`;
   if ('IntersectionObserver' in window && !isStill()) {

@@ -44,5 +44,92 @@
   "photo": "SAMPLE/SAMPLE_01.jpg (copyright-holder provided reference); AI source SAMPLE/SAMPLE_09.png",
   "sourceImagesModified": false,
   "dialogs": "settings and toolbar displayed; batch target field set to common public Pictures/Converted for the screenshot, no conversion; AI ready with actual Vulkan GPU probe, no inference or save",
-  "fullImageEdits": false
+  "fullImageEdits": false,
+  "featureCapture": {
+    "capturedUtc": "2026-10-14T14:54:55.350137+00:00",
+    "method": "Current Release production UI assemblies in an isolated native Windows Avalonia capture harness; lossless RenderTargetBitmap client visual at actual monitor scaling; no OS input or bitmap editing",
+    "productionUiSha256": "df2b9a1b66cdfbac926d526996fced44031d3eb21b39758f83fb6c483c9f467f",
+    "productionImagingSha256": "d5b13ade00cb751facab55389f0125786624e1277955cab271a53b8afe603332",
+    "nativeSha256": "b38daca46aa374944116d8da9f6a16a5c09c2fcaabd9eed8f8e080b8f01e0a36",
+    "captures": [
+      {
+        "file": "viewer-thumbnails.png",
+        "width": 1770,
+        "height": 1185,
+        "sha256": "f25c21defc0acd1badea27069b081ebae0786af6d2dc9e7f90af73595ed27ee7"
+      },
+      {
+        "file": "viewer-crop.png",
+        "width": 1770,
+        "height": 1185,
+        "sha256": "84ec4faa08efeae4f29b0d4173598722eeff1dac83d6380d1a3eb2e778865a5b"
+      },
+      {
+        "file": "viewer-actual-size.png",
+        "width": 1770,
+        "height": 1185,
+        "sha256": "9cbd10151ec3cfcba05c09ae44e304198dd6e11deca7636949979a64025210d9"
+      }
+    ],
+    "sourceImagesModified": false,
+    "thumbnailState": "Nine actual Unsplash @deuxdoom photos decoded; gallery curtains selected at position 6/9; EXIF panel and information bar visible. The downloaded files contain no EXIF camera data, so the app honestly displays unavailable values.",
+    "cropState": "Production crop mode on the coffee photo with a real routed Avalonia drag; 1607 x 1236 px selection; Apply and Save were never executed",
+    "photoSources": [
+      {
+        "file": "01-camera-collection.jpg",
+        "author": "Eric Park / @deuxdoom",
+        "url": "https://unsplash.com/photos/6_qlt9XCo9g",
+        "sourceSha256": "6b3c4fb0464ff0fe9e7b86a9e810d95b251e19d50b3dffdb06a5260015a9d320"
+      },
+      {
+        "file": "02-white-daisies.jpg",
+        "author": "Eric Park / @deuxdoom",
+        "url": "https://unsplash.com/photos/lLk30leHhVY",
+        "sourceSha256": "17cb0082aaa34c0df02de90a8f71d88be92141ae465479a2f7f3fe2225ac78d9"
+      },
+      {
+        "file": "03-coffee.jpg",
+        "author": "Eric Park / @deuxdoom",
+        "url": "https://unsplash.com/photos/UAV0_3SQeb8",
+        "sourceSha256": "a672fe3f688ff6668b34d90eded4a6f622e40bf9b310c0a39436f29b66e0d013"
+      },
+      {
+        "file": "04-phone-earbuds.jpg",
+        "author": "Eric Park / @deuxdoom",
+        "url": "https://unsplash.com/photos/iJ248tEuJ3Y",
+        "sourceSha256": "deee6ee1667ad44a54d0165ebd5bfb7abdb054d82b61574c827075a9bbaafc08"
+      },
+      {
+        "file": "05-yellow-rose.jpg",
+        "author": "Eric Park / @deuxdoom",
+        "url": "https://unsplash.com/photos/OkAjyG8sumY",
+        "sourceSha256": "3c94e5a1650d9b9bff9b615887fbbd5d01acdb8b719c65da34b77e6eadba0fc1"
+      },
+      {
+        "file": "06-gallery-curtains.jpg",
+        "author": "Eric Park / @deuxdoom",
+        "url": "https://unsplash.com/photos/v1s0HP8Zg3I",
+        "sourceSha256": "0161fb1c2fe5c37be1b014d80f53755de996d0ecd1ea79fac8aab152ff43b443"
+      },
+      {
+        "file": "07-art-museum.jpg",
+        "author": "Eric Park / @deuxdoom",
+        "url": "https://unsplash.com/photos/RGkgZOZLInw",
+        "sourceSha256": "3f8b6b05867531d59e56f550e434df6e4c151e0b5a295d67c0c2a600727c5559"
+      },
+      {
+        "file": "08-photo-gallery.jpg",
+        "author": "Eric Park / @deuxdoom",
+        "url": "https://unsplash.com/photos/o0he0B06RiI",
+        "sourceSha256": "00bc4689a334befcf381717d2fa7f83d7c501fce9c828a7928a020e2078bf228"
+      },
+      {
+        "file": "09-neon-exhibition.jpg",
+        "author": "Eric Park / @deuxdoom",
+        "url": "https://unsplash.com/photos/TkYWmBvb9KM",
+        "sourceSha256": "613dc8d7e8f234021b3b3c0a91e07a59d2f00ea175656f753eeff6db49d00f2f"
+      }
+    ],
+    "actualSizeState": "Yellow rose opened and production view.actualSize executed; zoom 100%; no edit or save"
+  }
 }
