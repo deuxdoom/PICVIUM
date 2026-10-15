@@ -132,8 +132,23 @@ PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했�
 
 ## 🚀 다운로드 및 실행
 
+**PICVIUM 1.0.1 · 2026-10-15 · Windows x64**
+
+큰 사진 폴더 탐색과 썸네일 반응을 개선하고, 앱 시작 속도와 배포 용량을 다듬었습니다. [변경 내용](CHANGELOG.md)을 확인하세요.
+
 1. [GitHub 릴리스](https://github.com/deuxdoom/PICVIUM/releases)에서 Windows x64용 배포본을 내려받습니다.
 2. 배포본의 폴더 구성을 유지한 채 `Picvium.exe`를 실행합니다. 필요한 .NET 런타임은 배포본에 포함되어 있습니다.
+
+배포 파일: `PICVIUM_v101.zip` · 137,736,877바이트(약 131.4 MiB).
+
+```powershell
+Get-FileHash PICVIUM_v101.zip -Algorithm SHA256
+```
+
+| 파일 | SHA-256 |
+| --- | --- |
+| `PICVIUM_v101.zip` | `CA8C11A6AF84EB386D9AD77954E4AFFC0F3C6386212D067AD6B04CE7005CEE72` |
+| `Picvium.exe` (ZIP 내부) | `FDCAE50B85B32A233129063CD197AC1C9EEF6E82D55343E91C4F465FEB3C223A` |
 
 <a id="folders"></a>
 

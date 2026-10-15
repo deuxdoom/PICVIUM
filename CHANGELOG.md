@@ -3,6 +3,15 @@
 All notable changes to PICVIUM releases are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] - 2026-10-15
+
+### Changed
+
+- 수천 장 폴더의 파일 위치 조회를 인덱스로 바꾸고, 폴더 정렬을 백그라운드에서 처리합니다.
+- 썸네일 항목을 화면에 필요한 만큼 생성하고, 빠른 스크롤의 불필요한 요청을 취소합니다. 연속 탐색 중 큰 이미지 디코딩이 쌓이는 것도 줄였습니다.
+- Windows 시작에 필요한 일부 코드를 사전 컴파일하고 아이콘을 캐시해 반복 기동의 초기화 비용을 줄였습니다.
+- UI 글꼴을 문자·모양 손실 없이 압축해 배포 용량을 줄였습니다. .NET 런타임·이미지 코덱·AI 모델은 계속 포함합니다.
+
 ## [1.0.0] - 2026-10-14
 
 첫 정식 배포입니다(Windows x64).

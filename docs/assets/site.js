@@ -29,13 +29,14 @@
   const dialog = document.querySelector('#lightbox');
   const shots = [
     { src: 'assets/screens/viewer-photo.png', title: 'galleryPhoto', alt: 'altPhoto' },
-    { src: 'assets/screens/viewer-thumbnails.png', title: 'galleryFolder', alt: 'altThumbnails' },
+    { src: 'assets/screens/viewer-thumbnails.png?v=20261015-photos', title: 'galleryFolder', alt: 'altThumbnails' },
     { src: 'assets/screens/toolbar.png', title: 'galleryToolbar', alt: 'altToolbar' },
     { src: 'assets/screens/settings.png', title: 'gallerySettings', alt: 'altSettings' },
-    { src: 'assets/screens/viewer-crop.png', title: 'galleryCrop', alt: 'altCrop' },
+    { src: 'assets/screens/viewer-crop.png?v=20261015-photos', title: 'galleryCrop', alt: 'altCrop' },
     { src: 'assets/screens/upscale.png', title: 'galleryAi', alt: 'altAi' },
     { src: 'assets/screens/batch.png', title: 'galleryBatch', alt: 'altBatch' },
-    { src: 'assets/screens/viewer-actual-size.png', title: 'galleryActualSize', alt: 'altActualSize' }
+    { src: 'assets/screens/viewer-actual-size.png?v=20261015-photos', title: 'galleryActualSize', alt: 'altActualSize' },
+    { src: 'assets/screens/viewer-exif.png?v=20261015-photos', title: 'galleryPhoto', alt: 'altExif' }
   ];
   const text = key => catalogs[language][key];
   // Site motion is independent of the Windows animation preference, per product direction.

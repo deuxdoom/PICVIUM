@@ -46,90 +46,166 @@
   "dialogs": "settings and toolbar displayed; batch target field set to common public Pictures/Converted for the screenshot, no conversion; AI ready with actual Vulkan GPU probe, no inference or save",
   "fullImageEdits": false,
   "featureCapture": {
-    "capturedUtc": "2026-10-14T14:54:55.350137+00:00",
-    "method": "Current Release production UI assemblies in an isolated native Windows Avalonia capture harness; lossless RenderTargetBitmap client visual at actual monitor scaling; no OS input or bitmap editing",
-    "productionUiSha256": "df2b9a1b66cdfbac926d526996fced44031d3eb21b39758f83fb6c483c9f467f",
-    "productionImagingSha256": "d5b13ade00cb751facab55389f0125786624e1277955cab271a53b8afe603332",
+    "capturedUtc": "2026-10-15T04:41:37.076981+00:00",
+    "method": "Current Release production UI assemblies in an isolated native Windows Avalonia capture harness; lossless RenderTargetBitmap client visual at actual monitor scaling; not a capture of the single-file executable; no OS input or reconstructed interface text",
+    "productionUiSha256": "2c5caff2e58ef3fec59a3541e9c7132ceadc4d23d0d69acd784fe6c275e50486",
+    "productionImagingSha256": "1178ea980664acf054b55a73ae84371f2ac0c59a55f8bb548f7d0d764e8ceaa8",
     "nativeSha256": "b38daca46aa374944116d8da9f6a16a5c09c2fcaabd9eed8f8e080b8f01e0a36",
     "captures": [
+      {
+        "file": "viewer-exif.png",
+        "width": 1770,
+        "height": 1185,
+        "sha256": "7a981e20703180afda56e5d15cb2e06676dc7a6a0cd43af089b9f34f0efb67f1"
+      },
       {
         "file": "viewer-thumbnails.png",
         "width": 1770,
         "height": 1185,
-        "sha256": "f25c21defc0acd1badea27069b081ebae0786af6d2dc9e7f90af73595ed27ee7"
+        "sha256": "87da4e20c5fac181ff39c37bddeb79c389a95a4152614577d551cf0b7f22bfe6"
       },
       {
         "file": "viewer-crop.png",
         "width": 1770,
         "height": 1185,
-        "sha256": "84ec4faa08efeae4f29b0d4173598722eeff1dac83d6380d1a3eb2e778865a5b"
+        "sha256": "cd076fe9d5a481844deb5220341cf6f459fec518d74e349e7bf70af9f7c58c43"
       },
       {
         "file": "viewer-actual-size.png",
         "width": 1770,
         "height": 1185,
-        "sha256": "9cbd10151ec3cfcba05c09ae44e304198dd6e11deca7636949979a64025210d9"
+        "sha256": "9b529a70cb7dc9b21f486de1aa38ce6e4ea992b4fa2d092e302b65af1a1874ca"
+      }
+    ],
+    "previews": [
+      {
+        "file": "viewer-exif.webp",
+        "width": 1770,
+        "height": 1185,
+        "sha256": "a2c4ab720c3d7ced84195888f05736c24e8ded35f96c73d44d9ed78dc660eb25",
+        "lossless": true,
+        "pixelEquivalentTo": "viewer-exif.png",
+        "pngBytes": 1471803,
+        "webpBytes": 1023886
+      },
+      {
+        "file": "viewer-thumbnails.webp",
+        "width": 1770,
+        "height": 1185,
+        "sha256": "b949f922b7a1ba3fa0f588e37fe6b4153c8201d0609688dfa9fbb3e43c858def",
+        "lossless": true,
+        "pixelEquivalentTo": "viewer-thumbnails.png",
+        "pngBytes": 1687130,
+        "webpBytes": 1168376
+      },
+      {
+        "file": "viewer-crop.webp",
+        "width": 1770,
+        "height": 1185,
+        "sha256": "9fed7c93f3c2faa41f0feb86587fdec3bcb0aee0fa59cbf5f754904c431547de",
+        "lossless": true,
+        "pixelEquivalentTo": "viewer-crop.png",
+        "pngBytes": 1425483,
+        "webpBytes": 909070
+      },
+      {
+        "file": "viewer-actual-size.webp",
+        "width": 1770,
+        "height": 1185,
+        "sha256": "9aeb65e369953f9181d5b6d5222feaae4cee97ef4091a0f171d84c4f0c9ba47f",
+        "lossless": true,
+        "pixelEquivalentTo": "viewer-actual-size.png",
+        "pngBytes": 801807,
+        "webpBytes": 472650
       }
     ],
     "sourceImagesModified": false,
-    "thumbnailState": "Nine actual Unsplash @deuxdoom photos decoded; gallery curtains selected at position 6/9; EXIF panel and information bar visible. The downloaded files contain no EXIF camera data, so the app honestly displays unavailable values.",
-    "cropState": "Production crop mode on the coffee photo with a real routed Avalonia drag; 1607 x 1236 px selection; Apply and Save were never executed",
+    "thumbnailState": "Nine photographer-provided original JPEGs with varied color tones; colorful installation selected at 2/9; EXIF sidebar closed; folder filmstrip and actual image information visible",
+    "exifState": "Pink exhibition selected at 4/9; actual SONY ILCE-7M3, FE 35mm F2.8 ZA, 1/125 s, f/3.2, ISO 320, 35 mm, 2019-03-14 11:30:20; timezone absent in source; EXIF panel and folder filmstrip visible",
+    "cropState": "Cafe dessert photo; production crop mode with a routed Avalonia drag; 1215 x 934 px selection; Apply and Save never executed",
+    "actualSizeState": "Yellow rose original with EXIF; production actual-size action at 100%, then pan to the flower through production pointer input; no image edit/save",
     "photoSources": [
       {
-        "file": "01-camera-collection.jpg",
+        "file": "01-silver-gallery.jpg",
+        "originalFile": "unsplash_02.jpg",
         "author": "Eric Park / @deuxdoom",
-        "url": "https://unsplash.com/photos/6_qlt9XCo9g",
-        "sourceSha256": "6b3c4fb0464ff0fe9e7b86a9e810d95b251e19d50b3dffdb06a5260015a9d320"
+        "url": "https://unsplash.com/@deuxdoom",
+        "source": "Original JPEG provided directly by the photographer; source EXIF retained; originals kept locally, not distributed as website assets",
+        "sourceSha256": "cb5b5c895cc8604b074827ca88a0aaf7581f38e3b75e06c3a221b425802cac01",
+        "tone": "neutral silver"
       },
       {
-        "file": "02-white-daisies.jpg",
+        "file": "02-color-installation.jpg",
+        "originalFile": "unsplash_03.jpg",
         "author": "Eric Park / @deuxdoom",
-        "url": "https://unsplash.com/photos/lLk30leHhVY",
-        "sourceSha256": "17cb0082aaa34c0df02de90a8f71d88be92141ae465479a2f7f3fe2225ac78d9"
+        "url": "https://unsplash.com/@deuxdoom",
+        "source": "Original JPEG provided directly by the photographer; source EXIF retained; originals kept locally, not distributed as website assets",
+        "sourceSha256": "9dabaae8643b4f4cf08e7e75ed3e653d9fe33695f83dfb9f4a763efe6a29ee43",
+        "tone": "cyan and orange"
       },
       {
-        "file": "03-coffee.jpg",
+        "file": "03-red-gallery.jpg",
+        "originalFile": "unsplash_04.jpg",
         "author": "Eric Park / @deuxdoom",
-        "url": "https://unsplash.com/photos/UAV0_3SQeb8",
-        "sourceSha256": "a672fe3f688ff6668b34d90eded4a6f622e40bf9b310c0a39436f29b66e0d013"
+        "url": "https://unsplash.com/@deuxdoom",
+        "source": "Original JPEG provided directly by the photographer; source EXIF retained; originals kept locally, not distributed as website assets",
+        "sourceSha256": "8d430a5afa7f56791f4a188c651c863245dff6c486ceadb0324f200732c5e535",
+        "tone": "red and purple"
       },
       {
-        "file": "04-phone-earbuds.jpg",
+        "file": "04-pink-exhibition.jpg",
+        "originalFile": "unsplash_07.jpg",
         "author": "Eric Park / @deuxdoom",
-        "url": "https://unsplash.com/photos/iJ248tEuJ3Y",
-        "sourceSha256": "deee6ee1667ad44a54d0165ebd5bfb7abdb054d82b61574c827075a9bbaafc08"
+        "url": "https://unsplash.com/@deuxdoom",
+        "source": "Original JPEG provided directly by the photographer; source EXIF retained; originals kept locally, not distributed as website assets",
+        "sourceSha256": "8503d36044905277a69ccac674fa03e8df6429b9bdd6dc370bb5fc433ec2f835",
+        "tone": "soft pink"
       },
       {
-        "file": "05-yellow-rose.jpg",
+        "file": "05-blue-balloons.jpg",
+        "originalFile": "unsplash_08.jpg",
         "author": "Eric Park / @deuxdoom",
-        "url": "https://unsplash.com/photos/OkAjyG8sumY",
-        "sourceSha256": "3c94e5a1650d9b9bff9b615887fbbd5d01acdb8b719c65da34b77e6eadba0fc1"
+        "url": "https://unsplash.com/@deuxdoom",
+        "source": "Original JPEG provided directly by the photographer; source EXIF retained; originals kept locally, not distributed as website assets",
+        "sourceSha256": "4bec5aeae042daa1b076d37a6ec585079428fa0126eda44ae98e95119e30407b",
+        "tone": "cool blue"
       },
       {
-        "file": "06-gallery-curtains.jpg",
+        "file": "06-cloud-installation.jpg",
+        "originalFile": "unsplash_10.jpg",
         "author": "Eric Park / @deuxdoom",
-        "url": "https://unsplash.com/photos/v1s0HP8Zg3I",
-        "sourceSha256": "0161fb1c2fe5c37be1b014d80f53755de996d0ecd1ea79fac8aab152ff43b443"
+        "url": "https://unsplash.com/@deuxdoom",
+        "source": "Original JPEG provided directly by the photographer; source EXIF retained; originals kept locally, not distributed as website assets",
+        "sourceSha256": "093a5a127300febbfdb2fff3167d76c9e48e8ea5d04756150b346e8a7b607f09",
+        "tone": "warm clouds and teal"
       },
       {
-        "file": "07-art-museum.jpg",
+        "file": "07-yellow-rose.jpg",
+        "originalFile": "unsplash_13.jpg",
         "author": "Eric Park / @deuxdoom",
-        "url": "https://unsplash.com/photos/RGkgZOZLInw",
-        "sourceSha256": "3f8b6b05867531d59e56f550e434df6e4c151e0b5a295d67c0c2a600727c5559"
+        "url": "https://unsplash.com/@deuxdoom",
+        "source": "Original JPEG provided directly by the photographer; source EXIF retained; originals kept locally, not distributed as website assets",
+        "sourceSha256": "8133a0c6a79b9578db59e4af931ac44d763be32a30e720cf3191c26fb800ccbd",
+        "tone": "pastel rose and yellow"
       },
       {
-        "file": "08-photo-gallery.jpg",
+        "file": "08-cafe-dessert.jpg",
+        "originalFile": "unsplash_20.jpg",
         "author": "Eric Park / @deuxdoom",
-        "url": "https://unsplash.com/photos/o0he0B06RiI",
-        "sourceSha256": "00bc4689a334befcf381717d2fa7f83d7c501fce9c828a7928a020e2078bf228"
+        "url": "https://unsplash.com/@deuxdoom",
+        "source": "Original JPEG provided directly by the photographer; source EXIF retained; originals kept locally, not distributed as website assets",
+        "sourceSha256": "828a41a7ba5a3dcce62caace4205f6f004dd03cae259cdeb30a828aaba47f972",
+        "tone": "warm wood and cream"
       },
       {
-        "file": "09-neon-exhibition.jpg",
+        "file": "09-blue-planter.jpg",
+        "originalFile": "unsplash_23.jpg",
         "author": "Eric Park / @deuxdoom",
-        "url": "https://unsplash.com/photos/TkYWmBvb9KM",
-        "sourceSha256": "613dc8d7e8f234021b3b3c0a91e07a59d2f00ea175656f753eeff6db49d00f2f"
+        "url": "https://unsplash.com/@deuxdoom",
+        "source": "Original JPEG provided directly by the photographer; source EXIF retained; originals kept locally, not distributed as website assets",
+        "sourceSha256": "ddf7d35079a9fb8e9dfcc2c9a07a9f1635224700e4c1453c238a557b3ca32a2f",
+        "tone": "blue and green"
       }
-    ],
-    "actualSizeState": "Yellow rose opened and production view.actualSize executed; zoom 100%; no edit or save"
+    ]
   }
 }

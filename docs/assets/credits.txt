@@ -13,34 +13,27 @@ Main photograph: SAMPLE_01.jpg, selected by the copyright holder; AI source: SAM
 The batch output field uses the common public Pictures/Converted directory as an example;
 no file conversion, inference or image save was run for these dialog captures.
 
-Functional viewer captures (viewer-thumbnails.png, viewer-crop.png, viewer-actual-size.png)
-Current Release production assemblies rendered with the same native Windows backend in
-an isolated capture harness. Nine actual Eric Park / @deuxdoom photos form the folder
-filmstrip; the white-curtains exhibition photo is selected, with the EXIF panel and
-information bar visible. Downloaded photos have no EXIF camera values, and the UI shows
-them as unavailable. The crop screen uses the coffee photo with a real 1607 x 1236 px
-selection routed through production Avalonia input handlers. The yellow rose screen uses
-the production 1:1 actual-size action at 100%. Apply/Save were never executed.
-Original SAMPLE and photo bytes are unchanged. Captures were exported directly as lossless
-PNG, with no image editing or reconstructed interface text. Per-capture assembly/native
-hashes, individual Unsplash source URLs/hashes and method: screens/source-info.json,
+Functional viewer captures (2026-10-15)
+viewer-exif.png, viewer-thumbnails.png, viewer-crop.png, viewer-actual-size.png
+Current Release production assemblies rendered in an isolated native Windows Avalonia
+capture harness. These are lossless client visuals, not single-file EXE screenshots.
+Nine photographer-provided original Eric Park / @deuxdoom JPEGs were selected for varied
+color tones: silver, cyan/orange, red/purple, pink, blue, teal, pastel yellow, warm wood,
+and blue/green. The pink exhibition shows actual SONY camera, lens and exposure EXIF.
+The folder-browsing capture has its EXIF sidebar closed. Crop shows a real 1215 x 934 px
+selection on the cafe dessert photo; Apply/Save were never executed. The yellow rose
+uses production 100% viewing and panning to the flower. No image or EXIF values were invented.
+Original photo bytes and EXIF are unchanged; standalone JPEG originals are kept locally
+and are not distributed as website assets. WebP previews are lossless format conversions
+of the same-size PNG captures, verified to have identical decoded RGBA pixels. PNG fallback
+and full-resolution PNG enlargement remain available. No retouching, interface reconstruction
+or image resampling was applied. The approved SAMPLE_01 hero remains unchanged.
+Per-capture hashes, source original filenames/hashes and method: screens/source-info.json,
 featureCapture. Numbered website markers are HTML overlays; enlarged PNGs are unmodified.
 
-Additional photography
+Photography
 Eric Park (@deuxdoom), used at the photographer's explicit request.
-Yellow rose on the table
-https://unsplash.com/photos/yellow-rose-on-the-table-OkAjyG8sumY
-Portrait on wall seen through the white curtains
-https://unsplash.com/photos/portrait-on-wall-seen-through-the-white-curtains-v1s0HP8Zg3I
-
-Additional @deuxdoom photos used inside the functional captures:
-https://unsplash.com/photos/6_qlt9XCo9g
-https://unsplash.com/photos/lLk30leHhVY
-https://unsplash.com/photos/UAV0_3SQeb8
-https://unsplash.com/photos/iJ248tEuJ3Y
-https://unsplash.com/photos/RGkgZOZLInw
-https://unsplash.com/photos/o0he0B06RiI
-https://unsplash.com/photos/TkYWmBvb9KM
+The photographer directly supplied the original JPEGs and their EXIF for these examples.
 Profile: https://unsplash.com/@deuxdoom
 Unsplash License: https://unsplash.com/license
 The page distinguishes photographs from application captures.

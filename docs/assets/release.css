@@ -524,3 +524,7 @@ dialog { overflow: auto; }
   .language-select select { width: 88px; }
   .nav-shell { gap: 4px; }
 }
+
+/* Lossless WebP previews retain PNG fallback and full-resolution PNG enlargement. */
+.screen-preview { display: block; width: 100%; min-width: 0; }
+.gallery-image .screen-preview { height: 100%; min-height: 0; }
