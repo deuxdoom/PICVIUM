@@ -528,3 +528,14 @@ dialog { overflow: auto; }
 /* Lossless WebP previews retain PNG fallback and full-resolution PNG enlargement. */
 .screen-preview { display: block; width: 100%; min-width: 0; }
 .gallery-image .screen-preview { height: 100%; min-height: 0; }
+
+/* v1.0.2 Setup / Portable downloads; filenames wrap on narrow screens. */
+.package-files { display: grid; gap: 10px; margin-top: 18px; }
+.package-file { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 14px; border: 1px solid #a8d1f52b; border-radius: 12px; color: inherit; }
+.package-file:hover { border-color: #85c8df; }
+.package-file strong { display: block; font-size: 14px; }
+.package-file code { display: block; margin-top: 5px; font-size: 11px; overflow-wrap: anywhere; }
+.package-file > span:last-child { font-size: 11px; white-space: nowrap; }
+.checksum code { white-space: pre-wrap; }
+[data-theme="light"] .package-file { border-color: #adbecb70; }
+@media (max-width: 500px) { .package-file { grid-template-columns: minmax(0, 1fr); gap: 6px; } }

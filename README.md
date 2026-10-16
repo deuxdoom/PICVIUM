@@ -51,7 +51,7 @@
 ## 📌 소개
 
 PICVIUM은 사진·그래픽·카메라 RAW·벡터·문서 이미지를 한 창에서 보고, 자르기·크기 변경·회전 같은 기본 편집과
-실제 형식 변환 저장까지 처리하는 이미지 뷰어입니다. 메뉴 막대·도구 모음·하단 정보 막대를 갖춘 익숙한 화면에,
+색·톤 보정, 모자이크·영역 흐리게와 실제 형식 변환 저장까지 처리하는 이미지 뷰어·에디터입니다. 메뉴 막대·도구 모음·하단 정보 막대를 갖춘 익숙한 화면에,
 9개 언어 즉시 전환과 사용자 지정 도구 모음·아이콘 테마를 더했습니다.
 
 이 저장소는 배포 안내용이며 앱 소스는 공개하지 않습니다. 실행 파일은 [GitHub 릴리스](https://github.com/deuxdoom/PICVIUM/releases)로 배포합니다.
@@ -89,7 +89,8 @@ PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했�
 
 ### 편집과 저장
 
-- 자르기, 크기 변경(리샘플링), 왼쪽·오른쪽 회전, 좌우·상하 반전, 실행 취소·다시 실행, 이미지 복사
+- **편집 모드(Ctrl+E)**: 독립 편집 창에서 자르기·크기 변경·회전·뒤집기, 실행 취소·다시 실행·원본 비교와 도구 설명을 제공합니다.
+- 노출·색·톤·레벨·커브·샤픈·노이즈 감소·적목·잡티 보정과 모자이크·영역 흐리게를 지원합니다.
 - 다른 이름으로 저장은 JPEG·PNG·BMP·TIFF·WebP·AVIF·GIF로 실제 다시 인코딩합니다. 확장자만 바꾸지 않습니다.
 - 원본 이미지는 확인 없이 덮어쓰지 않습니다.
 
@@ -105,7 +106,8 @@ PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했�
 - 명령 검색(`Ctrl+Shift+P`), 단축키 목록(`F1`)
 - 한국어·English·Español·日本語·简体中文·繁體中文·Français·Italiano·Русский, 재시작 없이 바로 전환
 - 사용자 단위 파일 연결(관리자 권한 불필요), 바탕화면으로 설정, 파일 위치 열기, 휴지통으로 삭제
-- 이미 열린 창에서 새 파일을 여는 단일 실행, 포터블 실행
+- 이미 열린 창에서 새 파일을 여는 단일 실행, 설치형·포터블 배포
+- 시작 시 새 버전 확인 및 **도움말 > 업데이트 확인**, Setup/ZIP 구분 다운로드와 SHA-256 검증(시작 시 확인은 환경설정에서 해제 가능)
 
 <a id="formats"></a>
 
@@ -132,23 +134,25 @@ PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했�
 
 ## 🚀 다운로드 및 실행
 
-**PICVIUM 1.0.1 · 2026-10-15 · Windows x64**
+**PICVIUM 1.0.2 · 2026-10-17 · Windows x64**
 
-큰 사진 폴더 탐색과 썸네일 반응을 개선하고, 앱 시작 속도와 배포 용량을 다듬었습니다. [변경 내용](CHANGELOG.md)을 확인하세요.
+독립 편집 창·색 보정·영역 효과, 설치형 Setup과 앱 내 업데이트를 제공합니다. [변경 내용](CHANGELOG.md)을 확인하세요.
 
-1. [GitHub 릴리스](https://github.com/deuxdoom/PICVIUM/releases)에서 Windows x64용 배포본을 내려받습니다.
-2. 배포본의 폴더 구성을 유지한 채 `Picvium.exe`를 실행합니다. 필요한 .NET 런타임은 배포본에 포함되어 있습니다.
+1. 설치형은 `PICVIUM_v102_Setup.exe`를 실행합니다. 기본 위치는 `C:\Program Files\PICVIUM`이며 변경할 수 있습니다(관리자 권한 필요).
+2. 포터블은 `PICVIUM_v102_Portable.zip` 전체를 원하는 폴더에 풀고 `Picvium.exe`를 실행합니다.
 
-배포 파일: `PICVIUM_v101.zip` · 137,736,877바이트(약 131.4 MiB).
+두 배포본 모두 .NET 런타임을 포함합니다. 포터블 설정도 사용자 프로필에 저장됩니다.
+
+| 파일 | 크기(바이트) | SHA-256 |
+| --- | ---: | --- |
+| [PICVIUM_v102_Setup.exe](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.2/PICVIUM_v102_Setup.exe) | 118,676,440 | `6423A8A1FF4CB943BAAB64DF96EE501AC10065998E9DA48FADDD068091A0C3CF` |
+| [PICVIUM_v102_Portable.zip](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.2/PICVIUM_v102_Portable.zip) | 138,169,797 | `269CD9CC11A767754E11E1AB4F886B644BF3557A3105A0930052302005738B67` |
+
+[릴리스 노트](https://github.com/deuxdoom/PICVIUM/releases/tag/1.0.2) · [SHA256SUMS.txt](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.2/SHA256SUMS.txt)
 
 ```powershell
-Get-FileHash PICVIUM_v101.zip -Algorithm SHA256
+Get-FileHash PICVIUM_v102_Setup.exe, PICVIUM_v102_Portable.zip -Algorithm SHA256
 ```
-
-| 파일 | SHA-256 |
-| --- | --- |
-| `PICVIUM_v101.zip` | `CA8C11A6AF84EB386D9AD77954E4AFFC0F3C6386212D067AD6B04CE7005CEE72` |
-| `Picvium.exe` (ZIP 내부) | `FDCAE50B85B32A233129063CD197AC1C9EEF6E82D55343E91C4F465FEB3C223A` |
 
 <a id="folders"></a>
 
@@ -165,8 +169,9 @@ themes/         # 도구 모음 아이콘 테마 (default와 직접 추가한 �
 licenses/       # 제3자 라이선스 고지
 ```
 
-실행 파일 옆에 `portable.flag` 파일이 있으면 설정을 같은 폴더의 `data/`에 저장하고, 없으면 사용자 설정 폴더에 저장합니다.
-설정은 버전을 기록해 원자적으로 저장하며, 손상된 설정은 백업에서 복구하거나 기본값으로 돌아갑니다.
+설치형·포터블 모두 `%APPDATA%\PICVIUM\settings.ini`를 공유하고 캐시·임시는 `%LOCALAPPDATA%\PICVIUM`에 저장합니다.
+EXE 옆 설정은 읽거나 자동 이전하지 않으며 `portable.flag`는 배포·업데이트 구분에만 사용합니다.
+설정은 원자적으로 저장하고 잠금·자동 백업 파일을 만들지 않습니다. 제거 시 기본값은 설정 보존이며, 공용 설정 삭제를 선택하면 포터블에도 영향을 줍니다.
 
 <a id="icon-themes"></a>
 
@@ -177,7 +182,7 @@ licenses/       # 제3자 라이선스 고지
 Total Commander나 WinRAR처럼 누구나 도구 모음 아이콘 테마를 만들어 바꿀 수 있습니다.
 **도구 > 아이콘 테마**에서 설치된 테마를 고르면 재시작 없이 바로 적용됩니다.
 
-- 테마는 `themes/` 아래의 폴더, 또는 같은 내용을 담은 `.zip`/`.pvtheme` 파일입니다. **도구 > 아이콘 테마 > 테마 폴더 열기**로 폴더를 열 수 있습니다.
+- 테마는 `themes/` 아래의 `.theme` 파일 하나로 배포·설치하며 기본 테마는 `default.theme`입니다. 기존 폴더·`.zip`/`.pvtheme`도 읽습니다. **도구 > 아이콘 테마 > 테마 폴더 열기**로 폴더를 열 수 있습니다.
 - `theme.json`과 명령 ID별 아이콘(`view.zoomIn.svg`, `file.open.png` 등)으로 구성합니다. SVG는 모든 화면 배율에서 선명하게 그립니다.
 - 테마에 없거나 손상된 아이콘은 그 명령만 기본 아이콘으로 표시합니다.
 - 형식, 크기 제한, 명령 ID 전체 목록은 배포 폴더의 `themes/README.txt`에 있습니다.
@@ -199,7 +204,6 @@ Total Commander나 WinRAR처럼 누구나 도구 모음 아이콘 테마를 만�
 ## 🧭 개발 예정
 
 - 일괄 변환의 폴더·재귀·변형·메타데이터 옵션, 일괄 회전
-- 색 보정(노출·대비·채도)
 - macOS·Linux 실행·패키징·서명 검증과 플랫폼별 기능 확대
 
 <a id="support"></a>

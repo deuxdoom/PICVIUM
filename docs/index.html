@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f7fa">
   <script>try { document.documentElement.dataset.theme = localStorage.getItem('picvium.site.theme') === 'dark' ? 'dark' : 'light'; } catch { /* Light is the default. */ }</script>
-  <meta name="description" content="사진을 돌아보고, 필요한 만큼 다듬으세요. 빠른 이미지 탐색부터 자르기·형식 변환·AI 업스케일까지, 원본을 지키며 남길 순간에 집중합니다.">
+  <meta name="description" content="사진을 돌아보고, 필요한 만큼 다듬으세요. 빠른 탐색부터 색 보정·영역 효과·AI 업스케일까지, 원본을 지키며 남길 순간에 집중합니다.">
   <meta property="og:title" content="Picvium — 이미지 뷰어와 편집기">
-  <meta property="og:description" content="사진을 돌아보고, 필요한 만큼 다듬으세요. 빠른 이미지 탐색부터 자르기·형식 변환·AI 업스케일까지, 원본을 지키며 남길 순간에 집중합니다.">
+  <meta property="og:description" content="사진을 돌아보고, 필요한 만큼 다듬으세요. 빠른 탐색부터 색 보정·영역 효과·AI 업스케일까지, 원본을 지키며 남길 순간에 집중합니다.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/screens/viewer-photo.png">
   <title>Picvium — 이미지 뷰어와 편집기</title>
@@ -15,10 +15,10 @@
   <link rel="icon" type="image/png" href="assets/brand/icon-64.png">
   <link rel="stylesheet" href="assets/site.css?v=20261015">
   <link rel="stylesheet" href="assets/brand-layout.css">
-  <link rel="stylesheet" href="assets/release.css?v=20261015-photos">
+  <link rel="stylesheet" href="assets/release.css?v=20261017-102">
   <link rel="stylesheet" href="assets/fonts.css">
   <link rel="preload" href="assets/fonts/latin-400.woff2" as="font" type="font/woff2" crossorigin>
-  <script src="assets/locales.js?v=20261015-101" defer></script>
+  <script src="assets/locales.js?v=20261017-102" defer></script>
   <script src="assets/theme.js?v=20261015" defer></script>
   <script src="assets/site.js?v=20261015-photos" defer></script>
 </head>
@@ -35,7 +35,7 @@
         <a href="#project" data-section="project" data-i18n="navProject">개발 및 배포</a>
       </nav>
       <div class="nav-tools">
-        <a class="header-download" href="https://github.com/deuxdoom/PICVIUM/releases/download/1.0.1/PICVIUM_v101.zip" data-download><span data-i18n="downloadShort">다운로드</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg></a>
+        <a class="header-download" href="#project" data-download><span data-i18n="downloadShort">다운로드</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg></a>
         <button id="theme-toggle" class="icon-button theme-toggle" type="button" aria-pressed="false" aria-label="다크 테마로 전환" data-i18n-aria="themeToDark" hidden><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.1A8.7 8.7 0 0 1 9.9 3.5 8.7 8.7 0 1 0 20.5 14.1Z"/></svg><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></svg></button>
         <label class="language-select"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a17 17 0 0 1 0 18 17 17 0 0 1 0-18Z"/></svg><select id="language" aria-label="페이지 언어" data-i18n-aria="languageLabel"><option value="ko">한국어</option><option value="en">English</option><option value="es">Español</option><option value="ja">日本語</option><option value="zh-Hans">简体中文</option><option value="zh-Hant">繁體中文</option><option value="fr">Français</option><option value="it">Italiano</option><option value="ru">Русский</option></select></label>
         <a class="header-project" href="https://github.com/deuxdoom/PICVIUM"><img src="assets/icons/mark-github.svg" width="19" height="19" alt=""><span>GitHub</span></a>
@@ -51,11 +51,11 @@
       <div class="hero-glow glow-one" aria-hidden="true"></div><div class="hero-glow glow-two" aria-hidden="true"></div>
       <div class="container hero-copy">
         <img class="hero-wordmark" src="assets/brand/wordmark-light.png" data-theme-wordmark width="480" height="117" alt="Picvium">
-        <a class="release-badge" href="https://github.com/deuxdoom/PICVIUM/releases/tag/1.0.1"><span class="status-dot" aria-hidden="true"></span><span data-i18n="releaseBadge">1.0.1 정식 출시</span><span aria-hidden="true">↗</span></a>
+        <a class="release-badge" href="https://github.com/deuxdoom/PICVIUM/releases/tag/1.0.2"><span class="status-dot" aria-hidden="true"></span><span data-i18n="releaseBadge">v1.0.2</span><span aria-hidden="true">↗</span></a>
         <h1 id="hero-title"><span data-i18n="heroTitleA">사진을 비우다,</span><br><span class="gradient-text" data-i18n="heroTitleB">기억을 남기다.</span></h1>
-        <p class="hero-description" data-i18n="heroDescription">사진을 돌아보고, 필요한 만큼 다듬으세요. 빠른 이미지 탐색부터 자르기·형식 변환·AI 업스케일까지, 원본을 지키며 남길 순간에 집중합니다.</p>
-        <div class="actions"><a class="button primary" href="#view"><span data-i18n="explore">기능 둘러보기</span><span aria-hidden="true">↓</span></a><a class="button ghost" href="https://github.com/deuxdoom/PICVIUM/releases/tag/1.0.1"><span data-i18n="releaseDetails">릴리스 노트 ↗</span></a></div>
-        <p class="release-status"><span data-i18n="platform">Windows x64 · 1.0.1 정식 버전</span><span class="divider" aria-hidden="true"></span><span data-i18n="releaseNote">2026-10-15 배포</span></p>
+        <p class="hero-description" data-i18n="heroDescription">사진을 돌아보고, 필요한 만큼 다듬으세요. 빠른 탐색부터 색 보정·영역 효과·AI 업스케일까지, 원본을 지키며 남길 순간에 집중합니다.</p>
+        <div class="actions"><a class="button primary" href="#view"><span data-i18n="explore">기능 둘러보기</span><span aria-hidden="true">↓</span></a><a class="button ghost" href="https://github.com/deuxdoom/PICVIUM/releases/tag/1.0.2"><span data-i18n="releaseDetails">릴리스 노트 ↗</span></a></div>
+        <p class="release-status"><span data-i18n="platform">Windows x64 · v1.0.2</span><span class="divider" aria-hidden="true"></span><span data-i18n="releaseNote">2026-10-17</span></p>
       </div>
       <div class="hero-stage container">
         <div class="stage-halo" aria-hidden="true"></div>
@@ -108,7 +108,7 @@
 
     <section class="edit-section" id="edit" aria-labelledby="edit-title">
       <div class="container edit-layout">
-        <div class="edit-copy" data-reveal><p class="eyebrow section-kicker"><span>02 /</span><span data-i18n="editKicker">이미지 편집</span></p><h2 id="edit-title"><span data-i18n="editTitleA">자르기와 크기 변경</span><br><span class="gradient-text" data-i18n="editTitleB">회전과 형식 변환</span></h2><p class="section-description" data-i18n="editDescription">자르기, 크기 변경, 회전과 뒤집기를 지원합니다. 실행 취소와 다시 실행으로 편집 내용을 변경할 수 있습니다.</p><div class="edit-features"><article><span class="edit-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M6 9h1m3 0h1m3 0h1m3 0h.1M6 12h1m3 0h1m3 0h1m3 0h.1M7 15h10"/></svg></span><div><h3 data-i18n="editFlowTitle">도구 모음 사용자 지정</h3><p data-i18n="editFlowText">버튼을 추가·제거하고 순서를 변경할 수 있습니다. 명령 검색과 단축키로 기능을 실행합니다.</p></div></article><article><span class="edit-symbol" aria-hidden="true">↗</span><div><h3 data-i18n="editSaveTitle">다른 이름으로 저장</h3><p data-i18n="editSaveText">선택한 형식으로 이미지를 인코딩해 저장합니다. JPEG·WebP·AVIF의 저장 품질은 환경설정에서 지정합니다.</p></div></article><article><span class="edit-symbol" aria-hidden="true">✦</span><div><h3 data-i18n="aiTitle">AI 업스케일</h3><p data-i18n="aiText">사진·일러스트 모델, 2·4·8배 확대와 결과 비교를 제공합니다. Windows x64와 Vulkan GPU가 필요하며 결과는 새 파일로 저장합니다.</p></div></article><article><span class="edit-symbol" aria-hidden="true">⇢</span><div><h3 data-i18n="batchTitle">일괄 형식 변환</h3><p data-i18n="batchText">여러 파일을 7개 형식으로 순차 변환합니다. 진행률·취소·파일별 결과를 확인합니다. 첫 이미지·페이지만 처리하며 메타데이터를 제거하고 기존 파일은 건너뜁니다.</p></div></article></div></div>
+        <div class="edit-copy" data-reveal><p class="eyebrow section-kicker"><span>02 /</span><span data-i18n="editKicker">이미지 편집</span></p><h2 id="edit-title"><span data-i18n="editTitleA">독립 편집 창에서</span><br><span class="gradient-text" data-i18n="editTitleB">색 보정과 영역 효과</span></h2><p class="section-description" data-i18n="editDescription">편집 모드(Ctrl+E)에서 자르기·크기 변경·색 보정·모자이크·영역 흐리게를 사용합니다. 미리보기·원본 비교·실행 취소를 지원합니다.</p><div class="edit-features"><article><span class="edit-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M6 9h1m3 0h1m3 0h1m3 0h.1M6 12h1m3 0h1m3 0h1m3 0h.1M7 15h10"/></svg></span><div><h3 data-i18n="editFlowTitle">색·톤·영역 보정</h3><p data-i18n="editFlowText">레벨·커브·샤픈·노이즈 감소와 선택 영역 효과를 제공하며 각 도구의 설명을 확인할 수 있습니다.</p></div></article><article><span class="edit-symbol" aria-hidden="true">↗</span><div><h3 data-i18n="editSaveTitle">다른 이름으로 저장</h3><p data-i18n="editSaveText">선택한 형식으로 이미지를 인코딩해 저장합니다. JPEG·WebP·AVIF의 저장 품질은 환경설정에서 지정합니다.</p></div></article><article><span class="edit-symbol" aria-hidden="true">✦</span><div><h3 data-i18n="aiTitle">AI 업스케일</h3><p data-i18n="aiText">사진·일러스트 모델, 2·4·8배 확대와 결과 비교를 제공합니다. Windows x64와 Vulkan GPU가 필요하며 결과는 새 파일로 저장합니다.</p></div></article><article><span class="edit-symbol" aria-hidden="true">⇢</span><div><h3 data-i18n="batchTitle">일괄 형식 변환</h3><p data-i18n="batchText">여러 파일을 7개 형식으로 순차 변환합니다. 진행률·취소·파일별 결과를 확인합니다. 첫 이미지·페이지만 처리하며 메타데이터를 제거하고 기존 파일은 건너뜁니다.</p></div></article></div></div>
         <div class="edit-visual" data-reveal><div class="edit-grid" aria-hidden="true"></div><figure class="dialog-card toolbar-card"><a class="screen-link" href="assets/screens/toolbar.png" data-shot="2" aria-label="도구 모음 설정 화면 크게 보기" data-i18n-aria="shotToolbar"><img src="assets/screens/toolbar.png" width="1080" height="840" alt="Picvium 도구 모음 사용자 지정 화면" data-i18n-alt="altToolbar" loading="lazy"></a><figcaption data-i18n="toolbarCaption">도구 모음 설정 화면</figcaption></figure><div class="edit-float"><span class="undo-icon" aria-hidden="true">↶</span><div><strong data-i18n="undoTitle">실행 취소와 다시 실행</strong><span data-i18n="undoText">실행 취소 · 다시 실행</span></div></div></div>
       </div>
     </section>
@@ -138,16 +138,23 @@
           <p class="eyebrow section-kicker"><span>05 /</span><span data-i18n="projectKicker">개발 및 배포</span></p>
           <img class="download-icon" src="assets/brand/icon-512.png" width="512" height="512" alt="" loading="lazy">
           <h2 id="download-title"><span data-i18n="downloadTitleA">남기고 싶은 순간,</span><br><span class="gradient-text" data-i18n="downloadTitleB">지금 시작하세요.</span></h2>
-          <p class="section-description" data-i18n="downloadDescription">Picvium 1.0.1 정식 버전. 압축을 풀고 Picvium.exe를 실행하세요. .NET 런타임이 포함되어 별도 설치가 필요 없습니다.</p>
+          <p class="section-description" data-i18n="downloadDescription">PICVIUM 1.0.2 · 설치형 Setup과 포터블 ZIP을 제공합니다. .NET 런타임이 포함되어 별도 설치가 필요 없습니다.</p>
           <p class="download-license" data-i18n="downloadLicense">개인·비상업용 무료 · 모든 이미지 처리는 내 PC에서</p>
         </div>
         <div class="download-panel" data-reveal>
-          <div class="package-heading"><span class="package-os" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 5 8-1v7H3Zm10-1 8-1v8h-8ZM3 13h8v7l-8-1Zm10 0h8v8l-8-1Z"/></svg></span><div><h3>Windows <span>x64</span></h3><p data-i18n="downloadSystem">Windows 10 / 11 · 64비트</p></div><span class="version-tag">v1.0.1</span></div>
-          <div class="package-meta"><span>PICVIUM_v101.zip · 131.4 MiB</span><time datetime="2026-10-15">2026.10.15</time></div>
-          <ol class="download-steps"><li><span data-i18n="downloadStep1">ZIP 파일을 다운로드합니다.</span></li><li><span data-i18n="downloadStep2">원하는 폴더에 전체 압축을 풉니다.</span></li><li><span data-i18n="downloadStep3">Picvium.exe를 실행합니다.</span></li></ol>
+          <div class="package-heading"><span class="package-os" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 5 8-1v7H3Zm10-1 8-1v8h-8ZM3 13h8v7l-8-1Zm10 0h8v8l-8-1Z"/></svg></span><div><h3>Windows <span>x64</span></h3><p data-i18n="downloadSystem">Windows 10 / 11 · 64비트</p></div><span class="version-tag">v1.0.2</span></div>
+          <div class="package-meta"><span>Setup · Portable</span><time datetime="2026-10-17">2026.10.17</time></div>
+          <div class="package-files">
+            <a class="package-file" href="https://github.com/deuxdoom/PICVIUM/releases/download/1.0.2/PICVIUM_v102_Setup.exe"><span><strong data-i18n="downloadSetup">설치형 다운로드</strong><code>PICVIUM_v102_Setup.exe</code></span><span>113.2 MiB</span></a>
+            <a class="package-file" href="https://github.com/deuxdoom/PICVIUM/releases/download/1.0.2/PICVIUM_v102_Portable.zip"><span><strong data-i18n="downloadPortable">포터블 다운로드</strong><code>PICVIUM_v102_Portable.zip</code></span><span>131.8 MiB</span></a>
+          </div>
+          <ol class="download-steps"><li><span data-i18n="downloadStep1">설치형 Setup 또는 포터블 ZIP을 선택합니다.</span></li><li><span data-i18n="downloadStep2">Setup을 실행하거나 ZIP 전체를 원하는 폴더에 풉니다.</span></li><li><span data-i18n="downloadStep3">Picvium.exe를 실행합니다.</span></li></ol>
+          <p class="package-note" data-i18n="sharedSettings">설치형·포터블은 %APPDATA%\PICVIUM\settings.ini를 공유하며 캐시·임시는 %LOCALAPPDATA%\PICVIUM에 저장합니다.</p>
+          <p class="package-note" data-i18n="uninstallSettings">제거 시 설정은 기본 보존됩니다. 공용 설정 삭제를 선택하면 포터블 설정도 사라집니다.</p>
           <p class="package-note" data-i18n="downloadGpu">AI 업스케일에는 Vulkan GPU가 필요합니다. macOS·Linux 버전은 준비 중입니다.</p>
-          <div class="download-links"><a href="https://github.com/deuxdoom/PICVIUM/releases/tag/1.0.1" data-i18n="releaseDetails">릴리스 노트 ↗</a><a href="https://github.com/deuxdoom/PICVIUM/blob/main/License.md" data-i18n="license">사용 라이선스</a><a href="https://github.com/deuxdoom/PICVIUM">GitHub ↗</a></div>
-          <details class="checksum"><summary data-i18n="verifyDownload">다운로드 파일 검증 (SHA-256)</summary><code id="download-sha">CA8C11A6AF84EB386D9AD77954E4AFFC0F3C6386212D067AD6B04CE7005CEE72</code><button id="copy-sha" type="button" hidden data-i18n="copyHash">해시 복사</button><span id="copy-status" role="status" aria-live="polite"></span></details>
+          <div class="download-links"><a href="https://github.com/deuxdoom/PICVIUM/releases/tag/1.0.2" data-i18n="releaseDetails">릴리스 노트 ↗</a><a href="https://github.com/deuxdoom/PICVIUM/releases/download/1.0.2/SHA256SUMS.txt">SHA256SUMS.txt ↗</a><a href="https://github.com/deuxdoom/PICVIUM/blob/main/License.md" data-i18n="license">사용 라이선스</a></div>
+          <details class="checksum"><summary data-i18n="verifyDownload">다운로드 파일 검증 (SHA-256)</summary><code id="download-sha">6423A8A1FF4CB943BAAB64DF96EE501AC10065998E9DA48FADDD068091A0C3CF  PICVIUM_v102_Setup.exe
+269CD9CC11A767754E11E1AB4F886B644BF3557A3105A0930052302005738B67  PICVIUM_v102_Portable.zip</code><button id="copy-sha" type="button" hidden data-i18n="copyHash">체크섬 복사</button><span id="copy-status" role="status" aria-live="polite"></span></details>
         </div>
       </div>
     </section>
