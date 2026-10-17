@@ -4,32 +4,23 @@ Picvium logo, icon and wordmark
 Copyright (c) 2026 deuxdoom. All rights reserved.
 Copied without modification from the project's approved branding exports.
 
-Application captures
-Current Release Picvium UI assemblies rendered with the native Windows desktop backend
-in an isolated capture harness (2026-10-14), using the original distribution's native libraries.
-Lossless PNG at actual monitor scaling; client visual only. No Computer Use, interface
-reconstruction or image editing. Assembly/native/image hashes and method: screens/source-info.json
-Main photograph: SAMPLE_01.jpg, selected by the copyright holder; AI source: SAMPLE_09.png.
-The batch output field uses the common public Pictures/Converted directory as an example;
-no file conversion, inference or image save was run for these dialog captures.
-
-Functional viewer captures (2026-10-15)
-viewer-exif.png, viewer-thumbnails.png, viewer-crop.png, viewer-actual-size.png
-Current Release production assemblies rendered in an isolated native Windows Avalonia
-capture harness. These are lossless client visuals, not single-file EXE screenshots.
-Nine photographer-provided original Eric Park / @deuxdoom JPEGs were selected for varied
-color tones: silver, cyan/orange, red/purple, pink, blue, teal, pastel yellow, warm wood,
-and blue/green. The pink exhibition shows actual SONY camera, lens and exposure EXIF.
-The folder-browsing capture has its EXIF sidebar closed. Crop shows a real 1215 x 934 px
-selection on the cafe dessert photo; Apply/Save were never executed. The yellow rose
-uses production 100% viewing and panning to the flower. No image or EXIF values were invented.
-Original photo bytes and EXIF are unchanged; standalone JPEG originals are kept locally
-and are not distributed as website assets. WebP previews are lossless format conversions
-of the same-size PNG captures, verified to have identical decoded RGBA pixels. PNG fallback
-and full-resolution PNG enlargement remain available. No retouching, interface reconstruction
-or image resampling was applied. The approved SAMPLE_01 hero remains unchanged.
-Per-capture hashes, source original filenames/hashes and method: screens/source-info.json,
-featureCapture. Numbered website markers are HTML overlays; enlarged PNGs are unmodified.
+Application captures (Picvium 1.0.2, 2026-10-18)
+viewer-photo, viewer-exif, viewer-thumbnails, viewer-actual-size, toolbar, settings, upscale,
+editor-levels, editor-curve, editor-mosaic, editor-resize (.png; large ones also .webp)
+Production Release assemblies of the distributed 1.0.2 build, rendered by an isolated native
+Windows Avalonia capture harness. Lossless PNG client visuals at the actual 150% monitor
+scaling; no Computer Use screenshots, OS input, retouching, resampling or rebuilt interface text.
+Editor captures show unapplied previews; Apply and Save were never run and no photo was changed.
+Each feature uses a different main photo: hero SAMPLE_01, EXIF unsplash_07, levels unsplash_20,
+curve unsplash_04, mosaic unsplash_11, resize unsplash_08, filmstrip unsplash_03, 1:1 unsplash_13,
+AI SAMPLE_09. EXIF values come from the files; no image or EXIF value was invented.
+AI upscale GPU line: shows "NVIDIA GeForce RTX 5090" at the copyright holder's request. The capture
+PC has an RTX 4080 SUPER, so this device result was supplied to the real dialog instead of the live
+Vulkan probe. The dialog still renders it; no pixels were edited.
+batch.png is the 2026-10-14 capture; a 1.0.2 rerun produced identical pixels, so it is kept.
+WebP previews are lossless conversions verified to decode to identical RGBA pixels; the page
+enlarges the PNG. Numbered markers on the page are HTML overlays, not part of the captures.
+Per-capture hashes, source photo hashes and states: screens/source-info.json
 
 Photography
 Eric Park (@deuxdoom), used at the photographer's explicit request.

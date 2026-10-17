@@ -28,15 +28,18 @@
   const cards = [...document.querySelectorAll('.gallery-card')];
   const dialog = document.querySelector('#lightbox');
   const shots = [
-    { src: 'assets/screens/viewer-photo.png', title: 'galleryPhoto', alt: 'altPhoto' },
-    { src: 'assets/screens/viewer-thumbnails.png?v=20261015-photos', title: 'galleryFolder', alt: 'altThumbnails' },
-    { src: 'assets/screens/toolbar.png', title: 'galleryToolbar', alt: 'altToolbar' },
-    { src: 'assets/screens/settings.png', title: 'gallerySettings', alt: 'altSettings' },
-    { src: 'assets/screens/viewer-crop.png?v=20261015-photos', title: 'galleryCrop', alt: 'altCrop' },
-    { src: 'assets/screens/upscale.png', title: 'galleryAi', alt: 'altAi' },
+    { src: 'assets/screens/viewer-photo.png?v=20261018', title: 'galleryPhoto', alt: 'altPhoto' },
+    { src: 'assets/screens/viewer-exif.png?v=20261018', title: 'galleryPhoto', alt: 'altExif' },
+    { src: 'assets/screens/editor-levels.png?v=20261018', title: 'editorTabLevels', alt: 'altEditorLevels' },
+    { src: 'assets/screens/editor-curve.png?v=20261018', title: 'editorTabCurve', alt: 'altEditorCurve' },
+    { src: 'assets/screens/editor-mosaic.png?v=20261018', title: 'editorTabMosaic', alt: 'altEditorMosaic' },
+    { src: 'assets/screens/editor-resize.png?v=20261018', title: 'editorTabResize', alt: 'altEditorResize' },
+    { src: 'assets/screens/viewer-thumbnails.png?v=20261018', title: 'galleryFolder', alt: 'altThumbnails' },
+    { src: 'assets/screens/toolbar.png?v=20261018', title: 'galleryToolbar', alt: 'altToolbar' },
+    { src: 'assets/screens/settings.png?v=20261018', title: 'gallerySettings', alt: 'altSettings' },
+    { src: 'assets/screens/upscale.png?v=20261018', title: 'galleryAi', alt: 'altAi' },
     { src: 'assets/screens/batch.png', title: 'galleryBatch', alt: 'altBatch' },
-    { src: 'assets/screens/viewer-actual-size.png?v=20261015-photos', title: 'galleryActualSize', alt: 'altActualSize' },
-    { src: 'assets/screens/viewer-exif.png?v=20261015-photos', title: 'galleryPhoto', alt: 'altExif' }
+    { src: 'assets/screens/viewer-actual-size.png?v=20261018', title: 'galleryActualSize', alt: 'altActualSize' }
   ];
   const text = key => catalogs[language][key];
   // Site motion is independent of the Windows animation preference, per product direction.
@@ -116,6 +119,34 @@
   // Collapse navigation only after the mobile controls have working handlers.
   root.classList.add('js-ready');
   mobileNav.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
+
+  // Editor screens: one actual capture per tool, as an ARIA tab set. Without scripts every capture stays visible.
+  const editorTabs = [...document.querySelectorAll('[data-editor-tab]')];
+  const editorPanels = editorTabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')));
+  const editorGroups = [...document.querySelectorAll('[data-editor-group]')];
+  function selectEditorTab(index, focus = false) {
+    editorTabs.forEach((tab, i) => {
+      const selected = i === index;
+      tab.setAttribute('aria-selected', String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+      editorPanels[i].hidden = !selected;
+    });
+    editorGroups.forEach(group => group.classList.toggle('is-active', group.dataset.editorGroup === editorTabs[index].dataset.group));
+    if (focus) editorTabs[index].focus();
+  }
+  // Fetch the other captures once the visitor reaches for the tabs, so switching does not wait on a cold download.
+  const warmEditorPanels = () => editorPanels.forEach(panel => panel.querySelectorAll('img[loading="lazy"]').forEach(image => { image.loading = 'eager'; }));
+  editorTabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => selectEditorTab(i));
+    tab.addEventListener('pointerenter', warmEditorPanels, { once: true });
+    tab.addEventListener('focus', warmEditorPanels, { once: true });
+    tab.addEventListener('keydown', event => {
+      const step = { ArrowRight: 1, ArrowLeft: -1 }[event.key];
+      if (step) { event.preventDefault(); selectEditorTab((i + step + editorTabs.length) % editorTabs.length, true); }
+      else if (event.key === 'Home' || event.key === 'End') { event.preventDefault(); selectEditorTab(event.key === 'Home' ? 0 : editorTabs.length - 1, true); }
+    });
+  });
+  if (editorTabs.length) selectEditorTab(0);
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !mobileNav.hidden) { closeMenu(); menuToggle.focus(); }
   });
