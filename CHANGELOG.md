@@ -3,6 +3,18 @@
 All notable changes to PICVIUM releases are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow [Semantic Versioning](https://semver.org/).
 
+## [1.0.3] - 2026-10-26
+
+### Changed
+
+- **모자이크·영역 흐리게**의 강도 범위를 **1~20**, 기본값을 **10**으로 조정했습니다. 초기화와 슬라이더 더블클릭도10으로 돌아오며 기존1~20 구간의 실제 효과 세기는 유지합니다.
+- Windows 시작 화면에 필요한 UI 코드를 사전 컴파일하고 아이콘 테마 처리를 창 표시 뒤로 옮겨 실행 대기를 줄였습니다.
+
+### Fixed
+
+- 파일 삭제 후 **휴지통으로 이동했다는 안내**가 남아 있던 문제를 수정해 3초 뒤 자동으로 닫습니다. 마지막 이미지 삭제에도 적용하며 새 안내나 오류는 이전 타이머가 지우지 않습니다.
+- **PDF 페이지가 전체 화면에서도 작게 보이던 문제**를 수정했습니다. 모니터 해상도에 맞춰 표시용 페이지를 렌더링하고 창 크기에 맞게 확대합니다. 작은 사진의 원래 크기 제한과 PDF 저장·썸네일 크기는 유지합니다.
+
 ## [1.0.2] - 2026-10-17
 
 ### Added

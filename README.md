@@ -89,6 +89,8 @@ PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했�
 
 ### 편집과 저장
 
+**1.0.3 · 2026-10-26: 영역 효과 강도 1~20·기본값 10, 실행 대기 개선, PDF 화면 맞춤과 삭제 안내 3초 자동 닫힘. 아래 화면은 1.0.2에서 촬영했습니다.**
+
 제목줄의 **편집 모드** 또는 **Ctrl+E**로 독립 편집 창을 엽니다. 도구를 골라 미리 보고 **적용**한 뒤, **다른 이름으로 저장**으로 결과를 저장합니다.
 
 ![PICVIUM 1.0.2 독립 편집 창: 카페 디저트 사진에 레벨을 미리 적용하고 RGB 입력 히스토그램을 표시한 화면](docs/assets/screens/editor-levels.webp)
@@ -163,24 +165,24 @@ PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했�
 
 ## 🚀 다운로드 및 실행
 
-**PICVIUM 1.0.2 · 2026-10-17 · Windows x64**
+**PICVIUM 1.0.3 · 2026-10-26 · Windows x64**
 
-독립 편집 창·색 보정·영역 효과, 설치형 Setup과 앱 내 업데이트를 제공합니다. [변경 내용](CHANGELOG.md)을 확인하세요.
+실행 대기와 PDF 화면 맞춤, 삭제 안내를 개선했습니다. [변경 내용](CHANGELOG.md)을 확인하세요.
 
-1. 설치형은 `PICVIUM_v102_Setup.exe`를 실행합니다. 기본 위치는 `C:\Program Files\PICVIUM`이며 변경할 수 있습니다(관리자 권한 필요).
-2. 포터블은 `PICVIUM_v102_Portable.zip` 전체를 원하는 폴더에 풀고 `Picvium.exe`를 실행합니다.
+1. 설치형은 `PICVIUM_v103_Setup.exe`를 실행합니다. 기본 위치는 `C:\Program Files\PICVIUM`이며 변경할 수 있습니다(관리자 권한 필요).
+2. 포터블은 `PICVIUM_v103_Portable.zip` 전체를 원하는 폴더에 풀고 `Picvium.exe`를 실행합니다.
 
 두 배포본 모두 .NET 런타임을 포함합니다. 포터블 설정도 사용자 프로필에 저장됩니다.
 
 | 파일 | 크기(바이트) | SHA-256 |
 | --- | ---: | --- |
-| [PICVIUM_v102_Setup.exe](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.2/PICVIUM_v102_Setup.exe) | 118,676,440 | `6423A8A1FF4CB943BAAB64DF96EE501AC10065998E9DA48FADDD068091A0C3CF` |
-| [PICVIUM_v102_Portable.zip](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.2/PICVIUM_v102_Portable.zip) | 138,169,797 | `269CD9CC11A767754E11E1AB4F886B644BF3557A3105A0930052302005738B67` |
+| [PICVIUM_v103_Setup.exe](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.3/PICVIUM_v103_Setup.exe) | 120,842,881 | `850C6A76F6F386FCB7B581E94B086DE28560EDF2A85F10A859967FC19B393C9C` |
+| [PICVIUM_v103_Portable.zip](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.3/PICVIUM_v103_Portable.zip) | 141,054,934 | `32F6D79B9C2A2F31E89B39BD66522BE556F473CC23F0A8AA857C1A6AE04F1538` |
 
-[릴리스 노트](https://github.com/deuxdoom/PICVIUM/releases/tag/1.0.2) · [SHA256SUMS.txt](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.2/SHA256SUMS.txt)
+[릴리스 노트](https://github.com/deuxdoom/PICVIUM/releases/tag/1.0.3) · [SHA256SUMS.txt](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.3/SHA256SUMS.txt)
 
 ```powershell
-Get-FileHash PICVIUM_v102_Setup.exe, PICVIUM_v102_Portable.zip -Algorithm SHA256
+Get-FileHash PICVIUM_v103_Setup.exe, PICVIUM_v103_Portable.zip -Algorithm SHA256
 ```
 
 <a id="folders"></a>
