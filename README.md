@@ -56,6 +56,8 @@ PICVIUM은 사진·그래픽·카메라 RAW·벡터·문서 이미지를 한 창
 
 이 저장소는 배포 안내용이며 앱 소스는 공개하지 않습니다. 실행 파일은 [GitHub 릴리스](https://github.com/deuxdoom/PICVIUM/releases)로 배포합니다.
 
+**1.0.4 (2026-10-28)**: 여러 페이지 문서를 열거나 일반 창·전체 화면을 전환할 때 `PgUp / PgDn` 안내가 중앙 아래에 잠깐 나타납니다. 설치형 Setup과 Portable ZIP을 제공합니다.
+
 PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했습니다. 쌓인 사진을 돌아보고, 필요한 만큼 다듬으며 남기고 싶은 순간에 집중하도록 돕습니다.
 
 <a id="requirements"></a>
@@ -89,7 +91,7 @@ PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했�
 
 ### 편집과 저장
 
-**1.0.3 · 2026-10-26: 영역 효과 강도 1~20·기본값 10, 실행 대기 개선, PDF 화면 맞춤과 삭제 안내 3초 자동 닫힘. 아래 화면은 1.0.2에서 촬영했습니다.**
+**1.0.4 · 2026-10-28: 여러 페이지 문서에 PgUp/PgDn 반투명 안내를 추가했습니다. 아래 화면은 1.0.2에서 촬영했습니다.**
 
 제목줄의 **편집 모드** 또는 **Ctrl+E**로 독립 편집 창을 엽니다. 도구를 골라 미리 보고 **적용**한 뒤, **다른 이름으로 저장**으로 결과를 저장합니다.
 
@@ -165,24 +167,24 @@ PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했�
 
 ## 🚀 다운로드 및 실행
 
-**PICVIUM 1.0.3 · 2026-10-26 · Windows x64**
+**PICVIUM 1.0.4 · 2026-10-28 · Windows x64**
 
-실행 대기와 PDF 화면 맞춤, 삭제 안내를 개선했습니다. [변경 내용](CHANGELOG.md)을 확인하세요.
+여러 페이지 문서의 페이지 이동 안내를 추가했습니다. [변경 내용](CHANGELOG.md)을 확인하세요.
 
-1. 설치형은 `PICVIUM_v103_Setup.exe`를 실행합니다. 기본 위치는 `C:\Program Files\PICVIUM`이며 변경할 수 있습니다(관리자 권한 필요).
-2. 포터블은 `PICVIUM_v103_Portable.zip` 전체를 원하는 폴더에 풀고 `Picvium.exe`를 실행합니다.
+1. 설치형은 `PICVIUM_v104_Setup.exe`를 실행합니다. 기본 위치는 `C:\Program Files\PICVIUM`이며 변경할 수 있습니다(관리자 권한 필요).
+2. 포터블은 `PICVIUM_v104_Portable.zip` 전체를 원하는 폴더에 풀고 `Picvium.exe`를 실행합니다.
 
 두 배포본 모두 .NET 런타임을 포함합니다. 포터블 설정도 사용자 프로필에 저장됩니다.
 
 | 파일 | 크기(바이트) | SHA-256 |
 | --- | ---: | --- |
-| [PICVIUM_v103_Setup.exe](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.3/PICVIUM_v103_Setup.exe) | 120,842,881 | `850C6A76F6F386FCB7B581E94B086DE28560EDF2A85F10A859967FC19B393C9C` |
-| [PICVIUM_v103_Portable.zip](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.3/PICVIUM_v103_Portable.zip) | 141,054,934 | `32F6D79B9C2A2F31E89B39BD66522BE556F473CC23F0A8AA857C1A6AE04F1538` |
+| [PICVIUM_v104_Setup.exe](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.4/PICVIUM_v104_Setup.exe) | 120,835,941 | `983DFA24B493B179CD208E11705966FA6AB7A6586E028E3995A975A594CD33BA` |
+| [PICVIUM_v104_Portable.zip](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.4/PICVIUM_v104_Portable.zip) | 141,057,858 | `EF2CCF2A1B7792CB3033410F93283576CCCFB2EFBB4D702E342E0AD39328779D` |
 
-[릴리스 노트](https://github.com/deuxdoom/PICVIUM/releases/tag/1.0.3) · [SHA256SUMS.txt](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.3/SHA256SUMS.txt)
+[릴리스 노트](https://github.com/deuxdoom/PICVIUM/releases/tag/1.0.4) · [SHA256SUMS.txt](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.4/SHA256SUMS.txt)
 
 ```powershell
-Get-FileHash PICVIUM_v103_Setup.exe, PICVIUM_v103_Portable.zip -Algorithm SHA256
+Get-FileHash PICVIUM_v104_Setup.exe, PICVIUM_v104_Portable.zip -Algorithm SHA256
 ```
 
 <a id="folders"></a>

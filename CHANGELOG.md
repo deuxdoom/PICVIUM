@@ -3,6 +3,12 @@
 All notable changes to PICVIUM releases are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow [Semantic Versioning](https://semver.org/).
 
+## [1.0.4] - 2026-10-28
+
+### Added
+
+- PDF·TIFF 등 여러 페이지 파일을 열거나 일반 창·전체 화면을 전환하면 중앙 아래에 **PgUp 이전 페이지 · PgDn 다음 페이지**를 반투명하게 안내합니다. 3초 뒤 서서히 사라지고 페이지 이동 시 즉시 닫히며 마우스 조작을 가로막지 않습니다.
+
 ## [1.0.3] - 2026-10-26
 
 ### Changed
