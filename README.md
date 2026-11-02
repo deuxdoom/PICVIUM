@@ -56,7 +56,7 @@ PICVIUM은 사진·그래픽·카메라 RAW·벡터·문서 이미지를 한 창
 
 이 저장소는 배포 안내용이며 앱 소스는 공개하지 않습니다. 실행 파일은 [GitHub 릴리스](https://github.com/deuxdoom/PICVIUM/releases)로 배포합니다.
 
-**1.0.4 (2026-10-28)**: 여러 페이지 문서를 열거나 일반 창·전체 화면을 전환할 때 `PgUp / PgDn` 안내가 중앙 아래에 잠깐 나타납니다. 설치형 Setup과 Portable ZIP을 제공합니다.
+**1.0.6 (2026-11-03)**: 일괄 레시피·AI, 주석·워터마크·캔버스, 2~4장 동기 비교, 확장 메타데이터, 애니메이션 제어와 JPEG XL 저장을 추가했습니다. 색 관리·정렬·폴더 자동 갱신·슬라이드쇼·파일 관리와 뷰어 안의 회전·모자이크, 메뉴 자동 숨김도 제공합니다. PDF는 가로 폭에 맞춰 맨 위부터 열고 긴 PDF의 확대 선명도를 개선했습니다. 설치형 Setup과 Portable ZIP을 제공합니다.
 
 PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했습니다. 쌓인 사진을 돌아보고, 필요한 만큼 다듬으며 남기고 싶은 순간에 집중하도록 돕습니다.
 
@@ -87,11 +87,14 @@ PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했�
 ### 정보
 
 - 하단 정보 막대: 실제 해상도와 메가픽셀, 원본 비트 수, 내용으로 판별한 형식, 파일 크기, 출처를 밝힌 날짜, 폴더 안 위치
+- IPTC/XMP·전체 태그·복사, RGB 표본 히스토그램·표시용 8비트 픽셀 값·전체 화면 EXIF와 2~4장 동기 비교. JPEG/PNG 별점·키워드는 원본 변경 확인 후 저장하며, 지도는 사용자가 누를 때만 브라우저에서 엽니다.
 - EXIF·파일 정보 사이드바. 파일에서 확인할 수 없는 값은 지어내지 않고 확인할 수 없다고 표시합니다.
 
 ### 편집과 저장
 
-**1.0.4 · 2026-10-28: 여러 페이지 문서에 PgUp/PgDn 반투명 안내를 추가했습니다. 아래 화면은 1.0.2에서 촬영했습니다.**
+**1.0.6 · 2026-11-03: 주석·워터마크·캔버스·테두리와 편집 레시피를 추가하고, 뷰어에서도 회전·모자이크를 바로 적용할 수 있습니다. 아래 화면은 1.0.2에서 촬영했습니다.**
+
+뷰어의 회전 버튼이나 **L/R**로 바로 회전하고, **도구 → 모자이크**로 영역을 선택해 적용할 수 있습니다. **Ctrl+Z/Y**로 되돌리고 **Ctrl+S**로 저장하며, 원본 덮어쓰기는 확인 후 진행합니다. **보기 → 메뉴 자동 숨김**은 Alt/F10 또는 상단 마우스 접근으로 다시 엽니다.
 
 제목줄의 **편집 모드** 또는 **Ctrl+E**로 독립 편집 창을 엽니다. 도구를 골라 미리 보고 **적용**한 뒤, **다른 이름으로 저장**으로 결과를 저장합니다.
 
@@ -99,6 +102,7 @@ PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했�
 
 | 도구 그룹 | 구현된 기능 |
 | --- | --- |
+| 주석·장식 | 텍스트·화살표·도형, 텍스트 워터마크, 캔버스·테두리, 스포이드·프리셋·레시피 |
 | 크기·방향 | 자르기, 리사이즈(px/%·비율 잠금·4개 리샘플링 방식), 회전, 뒤집기, 수평 보정 |
 | 빛·톤 | 노출, 밝기, 대비, 감마, 레벨·RGB 입력 히스토그램, 그림자/하이라이트 |
 | 색상 | 색조, 채도, 명도, 화이트밸런스, 비브런스, RGB 마스터 커브 |
@@ -109,14 +113,14 @@ PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했�
 
 - **실행 취소·다시 실행**, 누르고 있는 동안의 **수정 전 비교**, **ⓘ 도구 설명**을 제공합니다. 도구 패널을 접어도 조절값·선택 영역·이력을 유지합니다.
 - 편집 창도 창 맞춤·1:1·확대/축소·이동을 지원합니다. 히스토그램은 미리보기 기준이며, 화면 확대율과 저장할 이미지의 픽셀 크기는 별개입니다.
-- JPEG·PNG·BMP·TIFF·WebP·AVIF·GIF로 실제 인코딩하며, 현재 이미지·페이지·프레임 **한 장의 평면 이미지**를 저장합니다. 레이어·벡터·애니메이션은 유지하지 않습니다.
+- JPEG·PNG·BMP·TIFF·WebP·AVIF·GIF·JPEG XL로 실제 인코딩하며, 현재 이미지·페이지·프레임 **한 장의 평면 이미지**를 저장합니다. 레이어·벡터·애니메이션은 유지하지 않습니다.
 - 원본 이미지는 확인 없이 덮어쓰지 않습니다. 외부에서 변경된 원본은 덮어쓰기를 막고 다른 이름으로 저장하도록 안내합니다.
 
 ### AI 업스케일과 일괄 변환
 
 - 일반 크기 변경과 별개인 Real-ESRGAN 업스케일. 사진·일러스트 모델, 2·4·8배 확대, 실제 GPU 확인, 진행·취소와 결과 비교, 새 파일 저장을 제공합니다.
 - AI 업스케일은 Windows x64와 Vulkan GPU가 필요합니다. 추론 크기는 48MP·한 변 32,768px로 제한하며, 모델이 새 세부를 만들 수 있어 저장 전 결과를 확인합니다.
-- 여러 파일을 JPEG·PNG·BMP·TIFF·WebP·AVIF·GIF로 순차 변환하고 진행률·취소·파일별 결과를 확인합니다. 첫 이미지·페이지만 처리하고 메타데이터는 제거하며 ICC는 유지합니다. 기존 파일은 덮어쓰지 않고 건너뜁니다.
+- 여러 파일을 JPEG·PNG·BMP·TIFF·WebP·AVIF·GIF·JPEG XL로 변환합니다. 크기·회전·이름 규칙·폴더/하위 폴더·메타데이터·레시피·일괄 AI를 선택하고 진행·취소·파일별 결과를 확인합니다. 첫 이미지·페이지만 처리하며 동시 처리는 최대 2개, AI는 한 파일씩 진행합니다. 기존 파일은 덮어쓰지 않고 건너뜁니다.
 
 ### 사용자 지정과 Windows 연동
 
@@ -161,30 +165,32 @@ PICVIUM은 사진을 뜻하는 **PIC**과 한국어 **비움**에서 출발했�
 - DNG는 무손실·손실 JPEG, 비압축, 부동소수점 HDR, DNG 1.7 JPEG XL 압축, 스마트폰·드론·필름 스캐너 DNG를 확인했습니다.
 - 형식은 확장자가 아니라 파일 내용으로 판별합니다. 확장자만 바뀐 파일도 실제 형식으로 엽니다.
 - EPS는 TIFF/WMF 내장 미리보기만 표시하며 PostScript를 실행하지 않습니다. SVG textPath 등 확인된 미지원 변형은 안내합니다.
-- GIF로 저장하면 현재 이미지(또는 선택한 페이지) 한 장만 저장하며 애니메이션은 유지되지 않습니다.
+- 기본 저장은 현재 이미지·페이지의 정지 이미지입니다. 뷰어 환경설정에서 명시적으로 켜면 GIF/WebP/APNG 애니메이션을 8비트 합성 프레임으로 보존합니다. 프레임 이동·속도 조절·현재 프레임 별도 저장도 제공합니다.
 
 <a id="usage"></a>
 
 ## 🚀 다운로드 및 실행
 
-**PICVIUM 1.0.4 · 2026-10-28 · Windows x64**
+**PICVIUM 1.0.6 · 2026-11-03 · Windows x64**
 
-여러 페이지 문서의 페이지 이동 안내를 추가했습니다. [변경 내용](CHANGELOG.md)을 확인하세요.
+일괄 작업·편집 장식·이미지 비교·저장 옵션을 확장했습니다. [변경 내용](CHANGELOG.md)을 확인하세요.
 
-1. 설치형은 `PICVIUM_v104_Setup.exe`를 실행합니다. 기본 위치는 `C:\Program Files\PICVIUM`이며 변경할 수 있습니다(관리자 권한 필요).
-2. 포터블은 `PICVIUM_v104_Portable.zip` 전체를 원하는 폴더에 풀고 `Picvium.exe`를 실행합니다.
+1. 설치형은 `PICVIUM_v106_Setup.exe`를 실행합니다. 기본 위치는 `C:\Program Files\PICVIUM`이며 변경할 수 있습니다(관리자 권한 필요).
+2. 포터블은 `PICVIUM_v106_Portable.zip` 전체를 원하는 폴더에 풀고 `Picvium.exe`를 실행합니다.
+
+최근 파일·폴더·대상 경로는 설정에 각각 최대 12개 저장되며 파일 메뉴에서 지울 수 있습니다. JPEG 방향 태그 회전은 확인 후 원본을 변경하며 방향 태그를 지원하는 앱에서 보입니다.
 
 두 배포본 모두 .NET 런타임을 포함합니다. 포터블 설정도 사용자 프로필에 저장됩니다.
 
 | 파일 | 크기(바이트) | SHA-256 |
 | --- | ---: | --- |
-| [PICVIUM_v104_Setup.exe](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.4/PICVIUM_v104_Setup.exe) | 120,835,941 | `983DFA24B493B179CD208E11705966FA6AB7A6586E028E3995A975A594CD33BA` |
-| [PICVIUM_v104_Portable.zip](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.4/PICVIUM_v104_Portable.zip) | 141,057,858 | `EF2CCF2A1B7792CB3033410F93283576CCCFB2EFBB4D702E342E0AD39328779D` |
+| [PICVIUM_v106_Setup.exe](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.6/PICVIUM_v106_Setup.exe) | 121,125,556 | `2D2BC6AD730995A2B14BE9A69EA8EAB90BB63E4A19E82AF05BBF5CE3ED21BBDF` |
+| [PICVIUM_v106_Portable.zip](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.6/PICVIUM_v106_Portable.zip) | 141,412,026 | `7075766117C08B9035F09EF9B63AC03BBE162DAAC1B5CD571B7D9F20F9FCDBC5` |
 
-[릴리스 노트](https://github.com/deuxdoom/PICVIUM/releases/tag/1.0.4) · [SHA256SUMS.txt](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.4/SHA256SUMS.txt)
+[릴리스 노트](https://github.com/deuxdoom/PICVIUM/releases/tag/1.0.6) · [SHA256SUMS.txt](https://github.com/deuxdoom/PICVIUM/releases/download/1.0.6/SHA256SUMS.txt)
 
 ```powershell
-Get-FileHash PICVIUM_v104_Setup.exe, PICVIUM_v104_Portable.zip -Algorithm SHA256
+Get-FileHash PICVIUM_v106_Setup.exe, PICVIUM_v106_Portable.zip -Algorithm SHA256
 ```
 
 <a id="folders"></a>
@@ -236,7 +242,6 @@ Total Commander나 WinRAR처럼 누구나 도구 모음 아이콘 테마를 만�
 
 ## 🧭 개발 예정
 
-- 일괄 변환의 폴더·재귀·변형·메타데이터 옵션, 일괄 회전
 - macOS·Linux 실행·패키징·서명 검증과 플랫폼별 기능 확대
 
 <a id="support"></a>
